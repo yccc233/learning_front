@@ -1,6 +1,7 @@
 
-import {Checkbox, Table} from "antd";
-import React, {useEffect, useState} from "react";
+import {Table} from "antd";
+import {useEffect, useState} from "react";
+import React from "react";
 
 const $ = require("jquery");
 
