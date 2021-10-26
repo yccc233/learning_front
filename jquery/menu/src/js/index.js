@@ -1,9 +1,11 @@
-const $ = require("jquery");
-function a() {
-    $( "#target" ).contextmenu(function(event) {
-        alert( "处理程序.contextmenu()被调用。" );
-        event.preventDefault();
-    });
-}
 
-a();
+require([
+    "jquery",
+    "./count/calculate"
+], function ($, cal) {
+    $("#greet").click((event) => {
+        alert("你也好啊！")
+    });
+    cal.initCounter();
+    console.log("i am here!")
+});

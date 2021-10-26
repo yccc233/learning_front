@@ -7,7 +7,37 @@
 # 使用步骤
 
 ```shell
-$ npm i
-$ webpack
-$ npm start
+$ npm i       #安装依赖
+$ webpack     #打包
+$ npm start   #启动服务: node app.js
+```
+
+## 关于webpack
+> 至于原理，[这篇文章](https://blog.csdn.net/fqq_5280/article/details/86562488) 介绍的很详细
+
+
+## 关于gulp
+
+在写一个简单gulp task时，会报有错误：
+```shell
+......
+[15:28:56] The following tasks did not complete: test
+[15:28:56] Did you forget to signal async completion?
+```
+
+有几种解决方法
+
+1. 在不使用文件流的情况下，参数中加上done参数 <span style="color: rgb(79,134,236)">[官方推荐]</span>
+```javascript
+gulp.task('test', function (done) {
+    console.log("hello world!");
+    done();
+});
+```
+
+2. 使用async和await
+```javascript
+gulp.task('test', async function () {
+    await console.log("hello world!");
+});
 ```

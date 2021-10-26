@@ -1,9 +1,18 @@
 <head>
- <title>你好！</title>
+    <title>你好！</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: lightcyan;
+            border: 1px solid #aaa;
+        }
+    </style>
+    <script src="./build/bundle.js"></script>
 </head>
 <body>
-<div id="target">
-    右键单击这里
-</div>
-<script src="./build/bundle.js"></script>
+    <div id="box" draggable="true">
+        <button id="greet">你好！</button>
+    </div>
+    <button id="counter">计数 = 0</button>
 </body>
