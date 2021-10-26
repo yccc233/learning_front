@@ -1,14 +1,9 @@
-
+<head>
+ <title>你好！</title>
+</head>
+<body>
 <div id="target">
     右键单击这里
 </div>
-<script>
-    const $ = require("jquery");
-    function a() {
-        $( "#target" ).contextmenu(function(event) {
-            alert( "处理程序.contextmenu()被调用。" );
-            event.preventDefault();
-        });
-    }
-    a();
-</script>
+<script src="./build/bundle.js"></script>
+</body>

@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.60.0"
   }
 }
