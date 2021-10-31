@@ -7,14 +7,86 @@
 # 使用步骤
 
 ```shell
+# 老方法
 $ npm i       #安装依赖
 $ webpack     #打包
 $ npm start   #启动服务: node app.js
+
+
+# latest 直接一条命令完成所有事
+$ gulp
+```
+
+# <span style="font-size: 10px">（非常重要！！！）</span><span style="color: red">gulp和webpack组合技</span>
+
+如`gulpfile.js`文件和`webpack.config.js`两个文件中所示，
+对`./src`和`./public`目录下的文件进行整合。
+
+通过`gulpfile.js`我们可以把文件使用流的形式加工后放在指定位置。
+通过webpack将我们编写的ES6转译成ES5，供浏览器识别。
+最后利用gulp.watch方法监督文件的变动，自动化实现热重载。
+
+```javascript
+gulp.task('clean', done => {
+    del(['./build', './dist']);
+    done();
+});
+
+gulp.task('htmls', done => {
+    gulp.src("./public/*.*")
+        .pipe(gulp.dest('./build'))
+        .pipe(gulp.dest('./dist'));
+    done();
+})
+
+gulp.task('scripts', done => {
+    gulp.src("./src/**/*.js")
+        .pipe(concat('bundle.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
+    done();
+});
+
+gulp.task('stylesCSS', done => {
+    gulp.src("./src/**/*.css")
+        .pipe(minifyCSS())
+        .pipe(prefix())
+        .pipe(gulp.dest('./dist'));
+    done();
+});
+
+gulp.task('webpack', done => {
+    webpack(webpack_config).run((err, status) => {
+        err && console.log("webpack ERROR: ", err.toString())
+        console.log("webpack STATUS: ", status)
+        done();
+    })
+});
+
+gulp.task('server', done => {
+    bSync({
+        server: {
+            baseDir: ['build']
+        }
+    });
+    done();
+});
+
+gulp.task('default', gulp.series(
+    'clean', gulp.parallel('scripts', 'stylesCSS', 'htmls'),
+    'webpack', 'server', done => {
+        gulp.watch('./public/*', gulp.series('htmls', 'webpack'))
+        gulp.watch('./src/**/*.js', gulp.series('scripts', 'webpack'));
+        gulp.watch('./src/**/*.css', gulp.series('stylesCSS', 'webpack'));
+        gulp.watch('./dist/**/*', bSync.reload);
+        done();
+    }
+));
 ```
 
 ## 关于webpack
 > 至于原理，[这篇文章](https://blog.csdn.net/fqq_5280/article/details/86562488) 介绍的很详细
-
+> <br/>还有一些配置的api说明可以参考[这篇文章](https://blog.csdn.net/handsomezhanghui/article/details/107904250)
 
 ## 关于gulp
 

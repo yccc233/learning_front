@@ -1,0 +1,12 @@
+button {
+    background: #1890ff;
+    border-color: #1890ff;
+    color: #fff;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background: lightcyan;
+    border: 1px solid #aaa;
+}

@@ -7,5 +7,5 @@ require([
         alert("你也好啊！")
     });
     cal.initCounter();
-    console.log("i am here!")
+    console.log("i am here! ")
 });
