@@ -1,0 +1,175 @@
+<html>
+<head>
+    <title>学习标签和属性</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">这是一个a标签</a>
+<hr />
+    <abbr title="这是一个有工具提示的标签abbr，官方称为标记缩写">hover me!</abbr>
+<hr />
+    <address>
+        Written by <a href="http://www.baidu.com">Donald Duck</a>.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA<br>
+        斜体的看起来
+    </address>
+<hr>
+    <p>hover img! 图像映射（image-map）指带有可点击区域的一幅图像</p>
+    <img src="source/image.png" usemap="#planetmap" alt="Planets" title="可以在图中设置多个锚点，跳转至不同页面（图像地图）" width="127" height="153"/>
+    <map name="planetmap" id="planetmap">
+        <area shape="circle" coords="180,139,14" href ="index.html" alt="Venus" />
+        <area shape="circle" coords="129,161,10" href ="index.html" alt="Mercury" />
+        <area shape="rect" coords="0,0,110,260" href ="index.html" alt="Sun" />
+    </map>
+<hr>
+    <article>
+        <h1>this is artical label</h1>
+        <p>Windows Internet Explorer 9（简称 IE9）于 2011 年 3 月 14 日发布.....</p>
+    </article>
+<hr>
+    <p>this is aside label</p>
+    <aside>
+        <h4>Epcot Center</h4>
+        The Epcot Center is a theme park in Disney World, Florida.
+    </aside>
+<hr>
+    <p>audio标签哈</p>
+    <audio src="/source/goodnight.mp4" controls="controls" title="这还是一个音频">
+        您的浏览器不支持 audio 标签。
+    </audio>
+<hr>
+    <p>这是普通文本p标签 - <b>这是粗体文本b标签</b>。</p>
+<hr>
+    <ul>
+        <li>这里用的是bdi，发布用户评论或其他您无法完全控制的内容时，该标签很有用</li>
+        <li>Username <bdi dir="auto">Bill</bdi>:80 points</li>
+        <li>Username <bdi>Steve</bdi>: 78 points</li>
+    </ul>
+<hr>
+    bdo label:逆序 <br>
+    <bdo dir="rtl">Here is some text by bdo label</bdo>
+<hr>
+    <blockquote>
+        Here is a long quotation here is a long quotation here is a long quotation
+        here is a long quotation here is a long quotation here is a long quotation
+        here is a long quotation here is a long quotation here is a long quotation.<br>
+        blockquote之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进（增加外边距），而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+    </blockquote>
+<hr>
+    "canvas"标签定义图形，比如图表和其他图像。
+    "canvas"标签只是图形容器，您必须使用脚本来绘制图形。
+    <br>
+    <canvas id="myCanvas"></canvas>
+    <script type="text/javascript">
+
+        var canvas=document.getElementById('myCanvas');
+        var ctx=canvas.getContext('2d');
+        ctx.fillStyle='#FF0000';
+        ctx.fillRect(10,10,80,100);
+    </script>
+<hr>
+    <cite>cite标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题</cite>
+<hr>
+    <code>
+        console.log("这是一段code标签的代码！");
+    </code>
+<hr>
+    <p>看看data标签的效果
+        该元素既为数据处理器提供了机器可读的值，又为浏览器中的渲染提供了人类可读的值。</p>
+    <ul>
+        <li><data value="21053">圣女果</data></li>
+        <li><data value="21054">牛肉番茄</data></li>
+        <li><data value="21055">零食番茄</data></li>
+    </ul>
+<hr>
+    <p>这是用datalist和input两个标签结合使用的</p>
+    <input id="myCar" list="cars" />
+    <datalist id="cars">
+        <option value="BMW">
+        <option value="Ford">
+        <option value="Volvo">
+    </datalist>
+    <p>这是普通的select标签</p>
+    <select>
+        <option value="BMW">BMW</option>
+        <option value="Ford">Ford</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+<hr>
+    <p>这是dl、dt、dd三个标签的结合例，用来做声明、定义用的d-define，l-list，t-title</p>
+    <dl>
+        <dt>计算机</dt>
+        <dd>用来计算的仪器 ... ...</dd>
+        <dt>显示器</dt>
+        <dd>以视觉方式显示信息的装置 ... ...</dd>
+    </dl>
+<hr>
+    <p>与summary可以结合显示标题，否则默认显示"详情"</p>
+    <details>
+        <p>点我弹出细节，包裹在details里面</p>
+        <p>这是一个段落，，palapalapalapalapala...</p>
+    </details>
+<hr>
+    <del>我是傻子！</del>
+<hr>
+    <p>用的是dialog标签，目前还不知道有什么用！</p>
+    <table border="border">
+        <tr>
+            <th>一月 <dialog open>这是打开的对话窗口</dialog></th>
+            <th>二月</th>
+            <th>三月</th>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>28</td>
+            <td>31</td>
+        </tr>
+    </table>
+<hr>
+    <p>不赞成使用dir标签</p>
+    <dir>
+        <li>HTML</li>
+        <li>XHTML</li>
+        <li>CSS</li>
+    </dir>
+<hr>
+    <em>这是一段em标签的文本</em>
+<hr>
+    <p>embed标签用来使用插件，至于插件是什么，不知道！教程网站上也没有</p>
+    <embed src="/source/helloworld.swf" />
+<hr>
+    <p>这个表单系统看起来还是不错的，用了fieldset包裹起来，标题用legend标签声明</p>
+    <form>
+        <fieldset>
+            <legend>health information</legend>
+            height: <input type="text" />
+            weight: <input type="text" />
+        </fieldset>
+    </form>
+<hr>
+    <p>图片系统，figer标签包裹，内容包括两部分，figcaption展示标题，img展示图像。</p>
+    <figure>
+        <figcaption style="alignment: center">我跨！</figcaption>
+        <img src="/source/image.png" />
+    </figure>
+<hr>
+    <font size="3" color="red">This is font text!</font>
+    <font size="2" color="blue">This is font text!</font>
+    <font face="verdana" color="green">This is font text!</font>
+<hr>
+    <footer>
+        <p>Posted by: ycc (这是在footer标签的包裹下，用于页脚的页主信息)</p>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+    </footer>
+<hr>
+    <p>表单form标签</p>
+    <form action="./index1.html" method="get">
+        First name: <input type="text" name="fname" />
+        Last name: <input type="text" name="lname" />
+        <input type="submit" value="Submit" />
+    </form>
+
+</body>
+</html>

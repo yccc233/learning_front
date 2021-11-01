@@ -48,7 +48,7 @@ const MyBtns = (props) => {
     
     const decreaseClick = useCallback(() => dispatch({type: "DECREASE"}), []);
     
-    return     <>
+    return  <>
         <button onClick={increaseClick}>+</button>
         <button onClick={decreaseClick}>-</button>
     </>;

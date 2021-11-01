@@ -1,0 +1,206 @@
+<html>
+
+<body>
+
+    <p>下面这一段用的是header标签</p>
+    <header>
+        <h1>Welcome to my homepage</h1>
+        <p>My name is Donald Duck</p>
+    </header>
+
+    <p>The rest of my home page...</p>
+<hr>
+    <em>这是em标签</em><br>
+    <i>这是i标签</i>
+    <p>其实区别不大</p>
+
+<hr>
+    <iframe src="/source/image.png">
+
+    </iframe>
+    <p>frame 元素会创建包含另外一个文档的内联框架（即行内框架）。</p>
+    <p>具体属性查看<a href="https://www.w3school.com.cn/tags/tag_iframe.asp">w3c教程</a></p>
+<hr>
+    a dozen is <del>20</del> <ins>12</ins> pieces<br>
+    <ins>ins</ins>应该是insert的缩减写法，表明插入部分，一般与del标签一起使用！还阔以插入时间？
+<hr>
+    <p>下面是kbd属性</p>
+    <kbd>Ctrl</kbd>+<kbd>C</kbd>
+<hr>
+    <p>video标签，和media</p>
+    <video src="source/goodnight.mp4" controls="controls" width="400" height="320">
+        您的浏览器不支持 video 标签。
+    </video>
+<hr>
+    <p>一段带有 Word Break Opportunity 的文本，也就是wbr标签，在Chrome环境下没有用啊！</p>
+    <p>
+        如果想学习 AJAX，那么您必须熟悉 XML<wbr>Http<wbr>Request 对象。
+    </p>
+<hr>
+    <p>带有 keygen 字段的表单：(keygen标签规定用于表单的密钥对生成器字段)</p>
+    <form action="index.html" method="get">
+        Username: <input type="text" name="usr_name" />
+        Encryption: <keygen name="security" />
+        <input type="submit" />
+    </form>
+<hr>
+    <form>
+        <fieldset>
+            <legend>health information</legend>
+            height: <input type="text" />
+            weight: <input type="text" />
+        </fieldset>
+    </form>
+<hr>
+    <strong>main标签规定文档的主要内容</strong>
+<hr>
+    <p>mark标签突出文本！</p>
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+<hr>
+    <p>menu标签带有两个菜单按钮 （"File" 和 "Edit"） 的工具栏，每个按钮都包含带有一系列选项的下拉列表。<del>但是现在好像没用！</del></p>
+    <i>注释：所有主流浏览器均不支持 menu 元素。</i>
+    <menu type="toolbar">
+        <li>
+            <menu label="File">
+                <button type="button" onclick="file_new()">New...</button>
+                <button type="button" onclick="file_open()">Open...</button>
+                <button type="button" onclick="file_save()">Save</button>
+            </menu>
+        </li>
+        <li>
+            <menu label="Edit">
+                <button type="button" onclick="edit_cut()">Cut</button>
+                <button type="button" onclick="edit_copy()">Copy</button>
+                <button type="button" onclick="edit_paste()">Paste</button>
+            </menu>
+        </li>
+    </menu>
+<hr>
+    <p>使用 meter 元素来度量给定范围（gauge）内的数据。不同于进度条！</p>
+    <meter value="6" min="0" max="10">十分之三</meter>
+    <meter value="0.6">60%</meter>
+<hr>
+    <p>nav标签用于导航栏目</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index1.html">Previous</a>
+        <a href="index2.html">Next</a>
+    </nav>
+<hr>
+    <object classid="clsid:F08DF954-8592-11D1-B16A-00C0F0283628" id="Slider1"
+            width="100" height="50">
+        <param name="BorderStyle" value="1" />
+        <param name="MousePointer" value="0" />
+        <param name="Enabled" value="1" />
+        <param name="Min" value="0" />
+        <param name="Max" value="10" />
+    </object>
+    <details>
+        <summary>object标签的定义与说明</summary>
+        <p>
+            定义一个嵌入的对象。请使用此元素向您的 XHTML 页面添加多媒体。此元素允许您规定插入 HTML 文档中的对象的数据和参数，以及可用来显示和操作数据的代码。
+            object 标签用于包含对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash。
+            object 的初衷是取代 img 和 applet 元素。不过由于漏洞以及缺乏浏览器支持，这一点并未实现。
+            浏览器的对象支持有赖于对象类型。不幸的是，主流浏览器都使用不同的代码来加载相同的对象类型。
+            而幸运的是，object 对象提供了解决方案。如果未显示 object 元素，就会执行位于 object 和 object 之间的代码。通过这种方式，我们能够嵌套多个 object 元素（每个对应一个浏览器）。
+        </p>
+    </details>
+<hr>
+    <p>output标签用于接受计算后的结果</p>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <input type="range" id="a" value="50">100
+        +<input type="number" id="b" value="50">
+        =<output name="x" for="a b"></output>
+    </form>
+<hr>
+    <p>浏览器将查找媒体查询与当前视口宽度匹配的第一个 source 元素，然后显示正确的图像（在 srcset 属性中指定）。 img 元素是 picture 元素的最后一个子元素，如果没有 source 标签匹配，则作为后备选项。</p>
+    <picture>
+        <source media="(min-width:650px)" srcset="/source/image.png">
+        <source media="(min-width:465px)" srcset="/source/image.png">
+        <img src="/source/image.png" alt="Flowers" style="width:auto;">
+    </picture>
+<hr>
+    <details>
+        <summary>pre 元素可定义预格式化的文本。</summary>
+        <p>被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。</p>
+    </details>
+    <p>见过的是使用php输出时使用pre标签可以预览json数据</p>
+    <pre>浏览器将查找媒体查询与当前视口宽度匹配的第一个 source 元素，然后显示正确的图像（在 srcset 属性中指定）。 img 元......</pre>
+<hr>
+    <p>这就是progress标签，展示进度条的，区别于meter标签</p>
+    <progress value="22" max="100"></progress>
+<hr>
+    <q>这段话我在html中没有加双引号，这是q标签的作用，quotation</q>
+<hr>
+    在 HTML 5 中，s标签<s>仍然支持</s>已经不支持这个标签了。
+<hr>
+    <samp>这是samp文本，定义样本文本。</samp>
+<hr>
+    <p>sub和sup标签</p>
+    这是<sub>上标</sub>sub。
+    这是<sup>下标</sup>sup。
+<hr>
+    <p>使用svg标签和circle标签画一个圆</p>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    <details>
+        <summary>其他栗子</summary>
+        <svg width="400" height="100">
+            <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+        </svg>
+        <svg width="300" height="200">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"
+                     style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+        <p>画一个 SVG logo</p>
+        <svg height="130" width="500">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+
+            <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+        </svg>
+    </details>
+<hr>
+    <button onclick="showContent()">显示被隐藏的内容</button>
+    <p>被隐藏的内容是用template标签包裹的。</p>
+
+    <template>
+        <h2>Flower</h2>
+        <img src="/source/image.png" width="214" height="204">
+    </template>
+
+    <script>
+        function showContent() {
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+    </script>
+<hr>
+    <p>这是time标签的栗子，目前不知道有什么用</p>
+    <p>我们在每天早上 <time>9:00</time> 开始营业。</p>
+    <p>我在 <time datetime="2008-02-14">情人节</time> 有个约会。</p>
+    <details>
+        <p>time 标签定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。<br>
+           该元素能够以机器可读的方式对日期和时间进行编码，这样，举例说，用户代理能够把生日提醒或排定的事件添加到用户日程表中，搜索引擎也能够生成更智能的搜索结果</p>
+        <strong>目前所有主流浏览器都不支持 time>标签。</strong>
+    </details>
+<hr>
+    <p>track标签的作用是 播放带有字幕的视频</p>
+    <video width="320" height="240" controls="controls">
+        <source src="/source/goodnight.mp4" type="video/mp4" />
+        <track kind="subtitles" src="/source/subs_chi.srt" srclang="zh" label="Chinese">
+    </video>
+<hr>
+    <p>tt 标签呈现类似打字机或者等宽的文本效果。</p>
+    <tt>这是一段tt标签下的文本</tt>
+
+</body>
+</html>
