@@ -5,6 +5,8 @@ import "antd/dist/antd.css";
 import MyTable from "./Table/MyTable";
 import MyForm from "./Form/MyForm";
 import MyDrag from "./Drag/MyDrag";
+import Html2canvas from "./Html2canvas/Html2canvas";
+import ContextX from "./ContextMenu/Context";
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
                 <Route path={"/form"} component={MyForm} />
                 <Route path={"/drag"} component={MyDrag} />
                 <Route path={"/home"} component={Home} />
+                <Route path={"/html2canvas"} component={Html2canvas} />
+                <Route path={"/contextmenu"} component={ContextX} />
             </Switch>
         </div>
     );
@@ -30,6 +34,12 @@ const Home = () => {
             <Block />
             <h2>拖放</h2>
             <Link to={"/drag"}>Go</Link>
+            <Block />
+            <h2>截屏快照</h2>
+            <Link to={"/html2canvas"}>Go</Link>
+            <Block />
+            <h2>右键菜单</h2>
+            <Link to={"/contextmenu"}>Go</Link>
         </div>
 }
 

@@ -1,0 +1,52 @@
+<html>
+<title>学习标签的常规属性</title>
+<style>
+    .box {
+        width: 90%;
+        height: 100px;
+        border: 1px solid;
+        margin: 10px 0;
+    }
+</style>
+<body>
+    <p>目前只有firefox支持contextmenu属性</p>
+    <div contextmenu="mymenu" class="box">
+        <menu type="context" id="mymenu">
+            <menuitem label="Refresh"></menuitem>
+            <menuitem label="Twitter"></menuitem>
+        </menu>
+    </div>
+<hr>
+    <p>contenteditable属性规定元素内容是否可编辑。</p>
+    <div contenteditable="true" class="box">
+        hello！ ycc！
+    </div>
+<hr>
+    <p>draggable属性规定元素可拖动</p>
+    <p draggable="true" class="box" style="width: 50px; height: 50px; cursor: pointer;" id="myp"
+       ondragstart="drag(event)"
+    >
+        hello！ ycc！
+    </p>
+    <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)" style="display: flex"
+    ></div>
+    <script type="text/javascript">
+        function drag(event) {
+            console.log(event)
+            sessionStorage.setItem("dragid", event.target.id);
+        }
+        function drop(event) {
+            console.log(event)
+            var dragid = sessionStorage.getItem("dragid");
+            sessionStorage.removeItem("dragid");
+            var clone = document.getElementById(dragid).cloneNode(true);
+            console.log(clone)
+            event.target.appendChild(clone);
+            event.stopPropagation();
+        }
+        function allowdrop(event) {
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

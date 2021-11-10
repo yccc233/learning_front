@@ -1,0 +1,14 @@
+.context-box {
+    width: 200px;
+    height: 500px;
+    border: 1px solid;
+    position: relative;
+    margin: 50px;
+}
+
+.menu {
+    width: 100px;
+    height: 150px;
+    border: 1px solid #eee;
+    background: beige;
+}

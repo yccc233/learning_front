@@ -14,8 +14,10 @@ function MyDrag() {
 
     const onDragStart = event => {
         console.log("onDragStart", event, event.pageY, event.pageX)
-        setInitLeft(event.pageX);
-        setInitTop(event.pageY);
+        sessionStorage.setItem("boxPos", JSON.stringify({
+            x: event.clientX,
+            y: event.clientY,
+        }))
     }
 
     const onDrag = (event) => {
