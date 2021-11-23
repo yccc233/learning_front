@@ -4,7 +4,7 @@
 
 .App > span {
   height: 200px;
-  width: 200px;
+  width: 250px;
   border: 1px solid #aaa;
   margin: 10px;
 }
@@ -45,18 +45,123 @@
 .learn5 {
   background: lightblue;
   animation: colorCycle 5s infinite;
-}
 
-@keyframes colorCycle {
-  /*from {*/
-  /*  background-color:lightblue;*/
-  /*}*/
-  /*to {*/
-  /*  background-color:lightcoral;*/
-  /*}*/
-  50% {background: lightcoral}
+  @keyframes colorCycle {
+    /*from {*/
+    /*  background-color:lightblue;*/
+    /*}*/
+    /*to {*/
+    /*  background-color:lightcoral;*/
+    /*}*/
+    50% {background: lightcoral}
+  }
 }
 
 .learn6 {
+  margin: 28px 30px 0 30px;
+  width: 0;
+  height: 0;
+  border-bottom: 42px solid lightblue;
+  border-left: 48px solid transparent;
+  border-right: 34px solid transparent;
+  border-top: 0 solid transparent;
+
+  &:after {
+    content: "";
+    border-top: 42px solid lightblue;
+    border-left: 48px solid transparent;
+    border-right: 34px solid transparent;
+    border-bottom: 0 solid transparent;
+    width: 0;
+    height: 0;
+    margin: 0 30px 12px 30px;
+    position: absolute;
+  }
+}
+
+.clock {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: aliceblue;
+  border: 1px solid #ddd;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 10px 5px #ddd;
+
+  .scaleItemMiddle {
+    width: 3px;
+    left: 50px;
+    height: 43px;
+    background: transparent;
+    transform-origin: 50% 100%;
+    position: absolute;
+    border-top: 8px solid #bbb;
+  }
+
+  .scaleItemSmall {
+    width: 1px;
+    left: 50px;
+    height: 46px;
+    background: transparent;
+    transform-origin: 50% 100%;
+    position: absolute;
+    border-top: 4px solid #bbb;
+  }
+
+  .center {
+    display: inline;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    background: #666;
+    transform: translate(0px, 48px);
+  }
+
+  .hour {
+    display: inline;
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    background: cornflowerblue;
+    transform-origin: 50% 85%;
+    top: 27px;
+    left: 47px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 4px 1px #aaa;
+  }
+
+  .minute {
+    display: inline;
+    width: 8px;
+    height: 40px;
+    position: absolute;
+    background: #e56363;
+    transform-origin: 50% 90%;
+    top: 15px;
+    left: 48px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 4px 1px #aaa;
+  }
+
+  .second {
+    display: inline;
+    width: 5px;
+    height: 50px;
+    position: absolute;
+    background: #fda98b;
+    transform-origin: 50% 90%;
+    top: 7px;
+    left: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 4px 1px #aaa;
+  }
+}
+
+.learn7 {
 
 }

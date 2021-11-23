@@ -1,6 +1,10 @@
 import './App.less';
+import React from "react";
+import TimeClock from "./components/timeclock";
 
 function App() {
+
+
     return (
         <div>
             <div className="App">
@@ -27,13 +31,22 @@ function App() {
                     <div className={"learn6"} />
                 </span>
             </div>
-            {/*<div>*/}
-            {/*    <span>*/}
-            {/*        文本在div水平竖直中心*/}
-            {/*    </span>*/}
-            {/*</div>*/}
+            <div className="App">
+                <span style={{textAlign: "center"}}>
+                    <h4>这是一个时钟</h4>
+                    <TimeClock />
+                </span>
+                <span style={{textAlign: "center"}}>
+                    <h4>悬浮画板</h4>
+                    <div className={""}>
+
+                    </div>
+                </span>
+            </div>
         </div>
     );
 }
+
+
 
 export default App;
