@@ -185,6 +185,14 @@ function App() {
                         <div className={"item"}>666</div>
                     </div>
                 </Span>
+                <Span title={"图片圆形剪裁"} cssp={"clip-path"} style={{background: "lightblue"}}>
+                    <div className={"css15"}>
+                        <img src={"/img/xihuan.png"} width={100} alt={""}/>
+                        <div className={"tiny"}>
+                            这是一个span
+                        </div>
+                    </div>
+                </Span>
             </div>
         </div>
     );
