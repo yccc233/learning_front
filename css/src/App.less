@@ -79,20 +79,21 @@
   }
 }
 
+//时钟
 .clock {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   background: aliceblue;
-  border: 1px solid #ddd;
+  border: 1px solid #999;
   display: inline-block;
   position: relative;
   box-shadow: 0 0 10px 5px #ddd;
 
   .scaleItemMiddle {
     width: 3px;
-    left: 50px;
-    height: 43px;
+    left: 48.4px;
+    height: 42px;
     background: transparent;
     transform-origin: 50% 100%;
     position: absolute;
@@ -101,7 +102,7 @@
 
   .scaleItemSmall {
     width: 1px;
-    left: 50px;
+    left: 49.7px;
     height: 46px;
     background: transparent;
     transform-origin: 50% 100%;
@@ -162,6 +163,254 @@
   }
 }
 
+//悬浮画板
 .learn7 {
+  width: 80px;
+  height: 100px;
+  background: lightblue;
+  box-shadow: 5px 5px 9px 0 #bbb;
+  border-radius: 10%;
 
+}
+
+.learn7hov {
+  transition: all 0.2s linear;
+  width: 80px;
+  height: 100px;
+  background: lightblue;
+  border-radius: 10%;
+}
+
+.learn7hov:hover {
+  box-shadow: 5px 5px 9px 0 #bbb;
+  margin-top: -5px;
+  margin-right: 5px;
+  //transition: all 0.5s ease-out;
+  //background: linear-gradient(to bottom,
+  //  rgb(172, 216, 230) 0%,
+  //  rgb(172, 216, 230) 40%,
+  //  rgb(36, 198, 255) 100%,
+  //);
+}
+
+//小水滴
+.dropIndex {
+  width: 80%;
+  height: 80%;
+  border: 3px outset lightcoral;
+  position: relative;
+  background: #eee;
+  overflow: auto;
+
+  & div {
+    position: absolute;
+  }
+
+  .drop {
+    height: 60px;
+    width: 60px;
+    backdrop-filter: blur(0.6px);
+    top: 25px;
+    left: 50px;
+  }
+
+  .drop1 {
+    box-shadow: 6px 6px 6px 0 #aaa, 5px 5px 5px #ccc inset, -5px -5px 8px 3px #fff inset;
+  }
+
+  .drop2 {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    top: 40px;
+    left: 64px;
+    box-shadow: 0 0 10px 3px #fff;
+  }
+
+  .drop3 {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    top: 32px;
+    left: 80px;
+    box-shadow: 0 0 10px 1px #fff;
+  }
+}
+
+//开始学习css
+.css1 {
+  font-size: 24px;
+  overflow: auto;
+  height: 151px;
+}
+
+.css2 {
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+.css3 {
+  clip: rect(10px, 10px 10px 10px);
+}
+
+.css4 {
+
+
+  .moveDiv {
+    height: 50px;
+    width: 100px;
+    background: lightblue;
+    position: relative;
+    animation: onmove 5s infinite;
+  }
+
+  @keyframes onmove {
+    0% {
+      height: 50px;
+      width: 100px;
+      left: 10px;
+      top: 0;
+    }
+    12.5% {
+      height: 50px;
+      width: 0;
+      left: 110px;
+      top: 0;
+    }
+    25% {
+      height: 50px;
+      width: 100px;
+      left: 110px;
+      top: 0;
+    }
+
+    37.5% {
+      height: 0;
+      width: 100px;
+      left: 110px;
+      top: 50px;
+    }
+    50% {
+      height: 50px;
+      width: 100px;
+      left: 110px;
+      top: 50px;
+    }
+
+    62.5% {
+      height: 50px;
+      width: 0;
+      left: 110px;
+      top: 50px;
+    }
+    75% {
+      height: 50px;
+      width: 100px;
+      left: 10px;
+      top: 50px;
+    }
+
+    87.5% {
+      height: 0;
+      width: 100px;
+      left: 10px;
+      top: 50px;
+    }
+
+    100% {
+      height: 50px;
+      width: 100px;
+      left: 10px;
+      top: 0;
+    }
+  }
+}
+
+.css5 {
+  margin: 20px;
+  border: 5px solid cornflowerblue;
+  outline: 6px dashed lightblue;
+}
+
+.css6 {
+  border: 1px solid lightblue;
+  margin-inline: 20px;
+  resize: both;
+  overflow: hidden;
+}
+
+.css7 {
+  text-indent: 24px;
+  margin-inline: 20px;
+}
+
+.css8 {
+  text-indent: 24px;
+  margin-inline: 20px;
+  text-align: justify;
+}
+
+.css9 {
+  margin-inline: 20px;
+  text-shadow: 1px 1px 0 red;
+  font-size: 30px;
+  color: antiquewhite;
+}
+
+.css10 {
+  margin-inline: 20px;
+  text-shadow: 1px 1px 6px red;
+  font-size: 30px;
+  transform: rotateX(150deg);
+  color: #857c71;
+  margin-top: -10px;
+}
+
+.css11 {
+  margin-inline: 20px;
+  border-inline: 1px solid darkblue;
+}
+
+.css12 {
+  margin-inline: 20px;
+  border: 4px outset lightblue;
+  text-indent: 24px;
+  word-spacing: 10px;
+}
+
+.css13 {
+  width: 220px;
+  height: 150px;
+  overflow: auto;
+
+  .example.Text1 span, .example.Text1 {
+    writing-mode: horizontal-tb;
+  }
+
+  .example.Text2 span, .example.Text2 {
+    writing-mode: vertical-lr;
+  }
+
+  .example.Text3 span, .example.Text3 {
+    writing-mode: vertical-rl;
+  }
+
+  .example.Text4 span, .example.Text4 {
+    writing-mode: sideways-lr;
+  }
+
+  .example.Text5 span, .example.Text5 {
+    writing-mode: sideways-rl;
+  }
+}
+
+.css14 {
+  display: grid;
+  grid: auto / auto auto;
+  grid-gap: 10px;
+
+  .item {
+    background: lightblue;
+    text-align: center;
+  }
 }

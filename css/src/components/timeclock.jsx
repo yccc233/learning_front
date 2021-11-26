@@ -32,7 +32,7 @@ const TimeClock = () => {
             setHour(date.getHours() + +(date.getMinutes() / 60).toFixed(1));
             setMinute(date.getMinutes() + +(date.getSeconds() / 60).toFixed(1));
             setSecond(date.getSeconds() + +(date.getMilliseconds() / 1000).toFixed(2));
-        }, 100);
+        }, 1000);
 
     }, []);
 
@@ -44,13 +44,13 @@ const TimeClock = () => {
                 (drawTimeScale())
             }
             <div className={"hour"} style={{
-                transform: `rotate(${hour / 12 * 360}deg)`
+                transform: `rotate(${hour / 12 * 360 - 1}deg)`
             }}/>
             <span className={"minute"} style={{
-                transform: `rotate(${minute / 60 * 360}deg)`
+                transform: `rotate(${minute / 60 * 360 -1}deg)`
             }}/>
             <span className={"second"} style={{
-                transform: `rotate(${second / 60 * 360}deg)`
+                transform: `rotate(${second / 60 * 360 - 1}deg)`
             }}/>
             {/*<span className={"center"}/>*/}
         </div>
