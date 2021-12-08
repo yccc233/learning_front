@@ -15,6 +15,19 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
+const MyBtns = (props) => {
+
+    const dispatch = useDispatch();
+
+    const increaseClick = useCallback(() => dispatch({type: "INCREASE"}), []);
+    const decreaseClick = useCallback(() => dispatch({type: "DECREASE"}), []);
+
+    return  <>
+        <button onClick={increaseClick}>+</button>
+        <button onClick={decreaseClick}>-</button>
+    </>;
+}
+
 class App extends React.Component {
     render() {
         console.log(this.props)
@@ -32,7 +45,7 @@ class App extends React.Component {
                 <div>
                     <MyBtns />
                 </div>
-                <div> 
+                <div>
                     <MyBut />
                 </div>
             </div>
@@ -40,19 +53,6 @@ class App extends React.Component {
     }
 }
 
-const MyBtns = (props) => {
-    
-    const dispatch = useDispatch();
-    
-    const increaseClick = useCallback(() => dispatch({type: "INCREASE"}), []);
-    
-    const decreaseClick = useCallback(() => dispatch({type: "DECREASE"}), []);
-    
-    return  <>
-        <button onClick={increaseClick}>+</button>
-        <button onClick={decreaseClick}>-</button>
-    </>;
-}
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
