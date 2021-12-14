@@ -28,7 +28,8 @@ const GoBaidu = (props) => {
 
     return <div>
        <Button onClick={() => {
-            props.history.push("https://www.baidu.com/s?ie=UTF-8&wd=%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1")
+            // props.location.pathname = "https://www.baidu.com/s?ie=UTF-8&wd=%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"
+           window.location.href = "https://www.baidu.com/s?ie=UTF-8&wd=%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1";
        }}>跳转到百度</Button>
     </div>
 }

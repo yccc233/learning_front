@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modal/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Route/MyRoute.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../css/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../css/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContextMenu/Context.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContextMenu/Context.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContextMenu/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContextMenu/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContextMenu/contextmenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContextMenu/contextmenu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/MyForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MyForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/label-attr-obj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/.idea/label-attr-obj.iml" afterDir="false" />
@@ -136,7 +123,7 @@
       <workItem from="1638944791748" duration="512000" />
       <workItem from="1639362897589" duration="3652000" />
       <workItem from="1639441958238" duration="1209000" />
-      <workItem from="1639460173634" duration="311000" />
+      <workItem from="1639460173634" duration="816000" />
     </task>
     <servers />
   </component>
