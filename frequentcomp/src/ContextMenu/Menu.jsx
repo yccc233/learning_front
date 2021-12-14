@@ -21,7 +21,7 @@ function MenuX(props) {
         <div className={"menu"} style={{position: "absolute", left: pos.x, top: pos.y}}>
             {menuList.map(menu => {
                 return <div>
-                    <Button type={"link"} onClick={menu.fn}>{menu.name}</Button>
+                    <Button type={"link"} className={"self-button"} onClick={menu.fn}>{menu.name}</Button>
                 </div>
             })}
         </div>

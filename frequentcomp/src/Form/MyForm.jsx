@@ -7,7 +7,7 @@ import "./myform.css";
 const $ = require("jquery");
 
 function MyForm() {
-    
+
     const onFinish = (values) => {
         console.log(values)
         $.post("http://127.0.0.1:3005/filestream/writeFile", {data: JSON.stringify(values)}).then(res => {
@@ -28,9 +28,9 @@ function MyForm() {
             })
         });
     }
-    
+
     const Item = Form.Item;
-    
+
     const layout = {
         labelCol: {
             span: 6
@@ -39,20 +39,22 @@ function MyForm() {
             span: 16
         }
     };
-    
 
     const validateMessages = {
+        // eslint-disable-next-line no-template-curly-in-string
         required: '${label}必须要有！',
         number: {
+            // eslint-disable-next-line no-template-curly-in-string
             range: '${label}在${min}~${max}之间！'
         },
         types: {
+            // eslint-disable-next-line no-template-curly-in-string
             number: '${label}不合要求！',
+            // eslint-disable-next-line no-template-curly-in-string
             email: '${label}不合要求！'
         }
     }
-    /* eslint-enable no-template-curly-in-string */
-    
+
     return <>
         <div style={{padding: "50px 500px"}}>
             <span className={"back-link"}>
