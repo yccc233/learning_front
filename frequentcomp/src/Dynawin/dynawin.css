@@ -1,0 +1,30 @@
+
+#Box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: aliceblue;
+    padding: 20px;
+    display: flex;
+}
+
+#lbox {
+    height: 100%;
+    background: lightgreen;
+}
+
+#rbox {
+    flex: 1;
+    height: 100%;
+    background: lightgoldenrodyellow;
+}
+
+#dragline {
+    width: 5px;
+    height: 100%;
+    cursor: col-resize;
+}
+
+#dragline:hover {
+    background: #c41d7f;
+}

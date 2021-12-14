@@ -9,6 +9,7 @@ import MyDrag from "./Drag/MyDrag";
 import Html2canvas from "./Html2canvas/Html2canvas";
 import ContextX from "./ContextMenu/Context";
 import MyModal from "./Modal/Modal";
+import DynaWin from "./Dynawin/DynaWin";
 import "antd/dist/antd.css";
 
 
@@ -20,7 +21,7 @@ function App(props) {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
-                    {/*<IndexRoute component={Home} />*/}
+                    <Route path={"/dynawin"} component={DynaWin} />
                     {/*<Route path={"/route"} component={MyRoute} />*/}
                     <Route path={"/route"}>
                         <MyRoute />
@@ -42,6 +43,9 @@ const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
             <h2>路由</h2>
             <Link to={"/route"}>Go</Link>
+            <Block />
+            <h2>动态页面</h2>
+            <Link to={"/dynawin"}>Go</Link>
             <Block />
             <h2>表格数据</h2>
             <Link to={"/table"}>Go</Link>

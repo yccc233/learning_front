@@ -8,6 +8,8 @@
 - contextMenu
 - Html2canvas —— 基于javascript的截屏工具
 - Modal
+- 动态化窗口
+
 
 
 > 在html2canvas中用antd的Image可以不用主动缩小图片尺寸
@@ -45,7 +47,7 @@
 
 参考[这里](http://react-guide.github.io/react-router-cn/docs/guides/advanced/ComponentLifecycle.html)
 
-★ 主路由下添加
+<span style="color: red; text-decoration: underline;">★</span> 主路由下添加
 
 ```jsx
 <BrowserRouter basename={"/route"}> ... </BrowserRouter>
