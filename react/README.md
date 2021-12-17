@@ -1,20 +1,48 @@
-# Code examples for the React Book
+[TOC]
 
-## Setup
 
-Please refer to the first chapter in the book for instructions on setting up your environment with Node & npm.
 
-## Installing packages for all projects
+# react项目结构
 
-You can install all the packages for all the projects up front, saving you time in the future. To do so, from this directory:
 
+
+## .babelrc文件
+
+参考[知乎文章](https://zhuanlan.zhihu.com/p/84083454)
+
+
+
+使用 Babel 第一步就是配置此文件，放在项目根目录，此文件用于配置转码规则和插件，基本格式：
+
+```json
+{
+"presets":[],
+"plugins":[]
+}
 ```
-npm i
-npm run install-all
+
+对预设（presets）和插件（plugins）进行配置。
+
+
+
+## .babelrc 常用示例
+
+### react 项目
+
+安装：
+
+- npm install --save-dev @babel/preset-env @babel/plugin-transform-runtime @babel/preset-react
+
+```json
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false
+    }],
+    "@babel/preset-react"
+  ],
+  "comments": false,//不产生注释
+  "plugins": ["@babel/plugin-transform-runtime"]
+}
 ```
 
-Unless you have a quantum computer connected directly to an Amazon data center, this task will take a long time to complete.
-
-## Running the code
-
-See the respective `README.md` for each project.

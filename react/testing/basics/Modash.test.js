@@ -1,2 +1,20 @@
-// We write the tests for the Modash library in
-// this file in the Unit Testing chapter
+/* eslint-disable no-undef */
+import Modash from './Modash';
+
+describe('Modash', () => {
+    describe('`truncate()`', () => {
+        const string = 'there was one catch, and that was CATCH-22';
+
+        it('truncates a string', () => {
+            expect(
+                Modash.truncate(string, 19)
+            ).toEqual('there was one catche...');
+        });
+
+        it('no-ops if <= length', () => {
+            expect(
+                Modash.truncate(string, string.length)
+            ).toEqual(string);
+        });
+    });
+});
