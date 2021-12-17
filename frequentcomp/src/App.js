@@ -10,6 +10,7 @@ import Html2canvas from "./Html2canvas/Html2canvas";
 import ContextX from "./ContextMenu/Context";
 import MyModal from "./Modal/Modal";
 import DynaWin from "./Dynawin/DynaWin";
+import MyInput from "./Antd/Myinput";
 import "antd/dist/antd.css";
 
 
@@ -33,6 +34,7 @@ function App(props) {
                     <Route path={"/html2canvas"} component={Html2canvas} />
                     <Route path={"/contextmenu"} component={ContextX} />
                     <Route path={"/modal"} component={MyModal} />
+                    <Route path={"/antd/input"} component={MyInput} />
                 </Switch>
             </BrowserRouter>
         </div>
@@ -41,30 +43,33 @@ function App(props) {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
-            <h2>路由</h2>
-            <Link to={"/route"}>Go</Link>
-            <Block />
-            <h2>动态页面</h2>
-            <Link to={"/dynawin"}>Go</Link>
-            <Block />
-            <h2>表格数据</h2>
-            <Link to={"/table"}>Go</Link>
-            <Block />
-            <h2>表单</h2>
-            <Link to={"/form"}>Go</Link>
-            <Block />
-            <h2>拖放</h2>
-            <Link to={"/drag"}>Go</Link>
-            <Block />
-            <h2>截屏快照</h2>
-            <Link to={"/html2canvas"}>Go</Link>
-            <Block />
-            <h2>右键菜单</h2>
-            <Link to={"/contextmenu"}>Go</Link>
-            <Block />
-            <h2>弹窗</h2>
-            <Link to={"/modal"}>Go</Link>
-        </div>
+        <h2>Input实时显示</h2>
+        <Link to={"/antd/input"}>Go</Link>
+        <Block />
+        <h2>路由</h2>
+        <Link to={"/route"}>Go</Link>
+        <Block />
+        <h2>动态页面</h2>
+        <Link to={"/dynawin"}>Go</Link>
+        <Block />
+        <h2>表格数据</h2>
+        <Link to={"/table"}>Go</Link>
+        <Block />
+        <h2>表单</h2>
+        <Link to={"/form"}>Go</Link>
+        <Block />
+        <h2>拖放</h2>
+        <Link to={"/drag"}>Go</Link>
+        <Block />
+        <h2>截屏快照</h2>
+        <Link to={"/html2canvas"}>Go</Link>
+        <Block />
+        <h2>右键菜单</h2>
+        <Link to={"/contextmenu"}>Go</Link>
+        <Block />
+        <h2>弹窗</h2>
+        <Link to={"/modal"}>Go</Link>
+    </div>
 }
 
 const Block = () => <div style={{width: "100%", height: "50px"}}/>
