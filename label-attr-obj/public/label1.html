@@ -63,7 +63,6 @@
     <br>
     <canvas id="myCanvas"></canvas>
     <script type="text/javascript">
-
         var canvas=document.getElementById('myCanvas');
         var ctx=canvas.getContext('2d');
         ctx.fillStyle='#FF0000';
@@ -141,13 +140,20 @@
     <embed src="/source/helloworld.swf" />
 <hr>
     <p>这个表单系统看起来还是不错的，用了fieldset包裹起来，标题用legend标签声明</p>
-    <form>
-        <fieldset>
-            <legend>health information</legend>
+    <fieldset>
+        <legend>health information</legend>
+        <form>
             height: <input type="text" />
             weight: <input type="text" />
-        </fieldset>
-    </form>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>homepage info</legend>
+        <form>
+            where: <input type="text" />
+            who: <input type="text" />
+        </form>
+    </fieldset>
 <hr>
     <p>图片系统，figer标签包裹，内容包括两部分，figcaption展示标题，img展示图像。</p>
     <figure>
@@ -155,9 +161,9 @@
         <img src="/source/image.png" />
     </figure>
 <hr>
-    <font size="3" color="red">This is font text!</font>
-    <font size="2" color="blue">This is font text!</font>
-    <font face="verdana" color="green">This is font text!</font>
+    <font size="3" color="red">This is font label text!</font>
+    <font size="2" color="blue">This is font label text!</font>
+    <font face="verdana" color="green">This is font label text!</font>
 <hr>
     <footer>
         <p>Posted by: ycc (这是在footer标签的包裹下，用于页脚的页主信息)</p>

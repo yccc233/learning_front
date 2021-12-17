@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/label-attr.iml" filepath="$PROJECT_DIR$/.idea/label-attr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/label-attr-obj.iml" filepath="$PROJECT_DIR$/.idea/label-attr-obj.iml" />
     </modules>
   </component>
 </project>
