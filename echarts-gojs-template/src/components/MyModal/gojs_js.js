@@ -2,7 +2,7 @@ import {useCallback, useEffect} from "react";
 import ds from "./data";
 import * as go from "gojs";
 import {Button} from "antd";
-import "./modal.css";
+import "../../css/modal.css";
 const $ = require("jquery");
 
 /**
@@ -93,7 +93,7 @@ function GoJSModal_Js() {
     const $ = go.GraphObject.make;
     //配置基本属性定义
     let diagram;
-    
+
     const initDiagram = (canvas, nodes, links) => {
         //配置项初始化
         diagram = $(go.Diagram, canvas, {
@@ -102,7 +102,7 @@ function GoJSModal_Js() {
             "toolManager.mouseWheelBehavior": go.ToolManager.WheelZoom, //设置鼠标滚轮不是上下滑动，而是画布大小调整
             layout: $(go.ForceDirectedLayout),      // 布局管理，否则挤在一起视觉效果很差
         });
-    
+
         const circleTemplate = $(go.Node, "Auto",
             {
                 fromLinkable: true, fromLinkableSelfNode: true, fromLinkableDuplicates: true,
@@ -115,11 +115,11 @@ function GoJSModal_Js() {
             $(go.TextBlock, {margin: 8},
                 new go.Binding("text", "key"))
         );
-        
+
         diagram.nodeTemplate = circleTemplate;
         // diagram.linkTemplate = PanelLinkTemplate;
         diagram.model = new go.GraphLinksModel(nodes, links)
-    
+
         diagram.commit(function(d) {  // d === diagram
             d.nodes.each(function(node) {
                 if (node.data.key !== "one")
@@ -127,17 +127,17 @@ function GoJSModal_Js() {
             });
         }, "decrease scale");
     }
-    
-    
+
+
     //定义结点、关系和画布
     useEffect(() => {
-       
+
         setTimeout(() => {
             initDiagram("myCanvas", ds.sNodes, ds.sLinks);
-            
+
         }, 100);
     }, []);
-    
+
     const triggerDiagram = useCallback((e) => {
         diagram.commit((d) => {
             d.selection.each(node => {
@@ -150,8 +150,8 @@ function GoJSModal_Js() {
             });
         }, "change color");
     }, []);
-    
-    
+
+
     return <>
         <div id="myCanvas" className="diagram-style"/>
         <div>

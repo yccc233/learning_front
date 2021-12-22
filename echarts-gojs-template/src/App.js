@@ -1,45 +1,43 @@
 import React, {useCallback, useState} from "react";
 import {Button} from "antd";
-import "./App.css";
+import "./css/App.css";
 import MyModal from "./components/MyModal/MyModal";
 
 function App(props) {
-    
+
     const [modalVisible, setModalVisible] = useState(false);
     const [modalType, setModalType] = useState(null);
-    
+
     const gojsClick_react = useCallback(() => {
         setModalType("gojs_react")
         setModalVisible(true);
     }, []);
-    
+
     const echartClick_react = useCallback(() => {
         setModalType("echart_react")
         setModalVisible(true);
     }, []);
-    
+
     const gojsClick_js = useCallback(() => {
         setModalType("gojs_js")
         setModalVisible(true);
     }, []);
-    
+
     const echartClick_js = useCallback(() => {
         setModalType("echart_js")
         setModalVisible(true);
     }, []);
-    
+
     const handleOk = () => {
         setModalVisible(false);
     };
     const handleCancel = () => {
         setModalVisible(false);
     };
-    
+
+    console.log(modalType, modalVisible)
     return (
         <>
-            {
-                console.log(modalType, modalVisible)
-            }
             <div style={{width: "100%", textAlign: "center"}}>
                 <header className="head">GOJS及ECharts</header>
                 <div className="divide">react版本</div>
@@ -60,7 +58,7 @@ function App(props) {
                         onOk={handleOk}
                         onCancel={handleCancel}
                     />
-                    
+
                 }
             </div>
         </>

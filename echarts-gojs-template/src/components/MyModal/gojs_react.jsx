@@ -1,16 +1,15 @@
 
-import {LoadingOutlined} from "@ant-design/icons";
-import {useCallback, useEffect} from "react";
+import {useCallback} from "react";
 import {ReactDiagram} from "gojs-react";
 import * as go from "gojs";
 import ds from "./data";
-import "./modal.css";
+import "../../css/modal.css";
 
 function GoJSModal_React() {
     const $ = go.GraphObject.make;
     //配置基本属性定义
     let diagram;
-    
+
     const initDiagram = useCallback(() => {
         //配置项初始化
         diagram = $(go.Diagram, {
@@ -23,13 +22,13 @@ function GoJSModal_React() {
                 linkKeyProperty: "key"
             })
         });
-        
+
         //定义画布背景，这里用eee色的网格线，网格大小为15x15
         diagram.grid = $(go.Panel, go.Panel.Grid,
             {gridCellSize: new go.Size(30, 30)},
             $(go.Shape, "LineV", {stroke: "#eee"}),
             $(go.Shape, "LineH", {stroke: "#eee"}));
-    
+
         let itemTemplate = $(go.Panel, "Horizontal",    //水平对齐
             $(go.Shape,
                 {width: 10, height: 10, margin: 2, strokeWidth: 1, stroke: "#333"},
@@ -37,7 +36,7 @@ function GoJSModal_React() {
                 new go.Binding("fill", "color")),
             $(go.TextBlock,
                 new go.Binding("text", "name")));
-    
+
         let PanelTemplate = $(go.Node, "Auto",
             {
                 fromSpot: go.Spot.AllSides,     //这两行是申明from与to结点的接口地点为全边，连线默认在各边中点
@@ -65,7 +64,7 @@ function GoJSModal_React() {
                     new go.Binding("itemArray", "items")
                 ))
         );
-    
+
         let PanelLinkTemplate = $(go.Link,
             {
                 selectionAdorned: true,
@@ -82,7 +81,7 @@ function GoJSModal_React() {
                     segmentOrientation: go.Link.OrientUpright
                 },
                 new go.Binding("text", "text")),
-        
+
             $(go.TextBlock,
                 {
                     segmentIndex: -1,    //to 标签
@@ -93,10 +92,10 @@ function GoJSModal_React() {
             $(go.Shape,
                 {toArrow: "Standard", fill: "#aaa", stroke: null}),
         );
-        
+
         diagram.nodeTemplate = PanelTemplate;
         diagram.linkTemplate = PanelLinkTemplate;
-        
+
         return diagram;
     }, []);
 
