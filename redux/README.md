@@ -79,6 +79,19 @@ const MyBtns = (props) => {
 }
 ```
 
+## 组件中的映射
+
+在上节中使用时，需要使用`connect`方法包裹组件，并且通过`mapStateToProps`，`mapDispatchToProps`两个方法管理状态和动作。
+此节来源于[https://blog.csdn.net/suwu150/article/details/79415085](https://blog.csdn.net/suwu150/article/details/79415085)
+- `mapStateToProps`
+  
+    `mapStateToProps`是一个函数，用于建立组件跟 store 的 state 的映射关系。作为一个函数，它可以传入两个参数，结果一定要返回一个 object 传入mapStateToProps之后，会订阅store的状态改变，在每次 store 的 state 发生变化的时候，都会被调用 ownProps代表组件本身的props，如果写了第二个参数ownProps，那么当prop发生变化的时候，mapStateToProps也会被调用。例如，当 props接收到来自父组件一个小小的改动，那么你所使用的 ownProps 参数，mapStateToProps 都会被重新计算。 mapStateToProps可以不传，如果不传，组件不会监听store的变化，也就是说Store的更新不会引起UI的更新
+
+- `mapDispatchToProps`
+
+  `mapDispatchToProps`用于建立组件跟store.dispatch的映射关系,可以是一个object，也可以传入函数。如果mapDispatchToProps是一个函数，它可以传入dispatch,ownProps, 定义UI组件如何发出action，实际上就是要调用dispatch这个方法
+
+
 ## 拓展
 
 - 多个reducer合并
