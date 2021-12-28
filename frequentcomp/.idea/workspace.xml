@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../css/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../css/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/label-attr-obj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/.idea/label-attr-obj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/public/label.html" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/public/label.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/public/label1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/public/label1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../label-attr-obj/public/label2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../label-attr-obj/public/label2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/.idea/myresume.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myresume/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +117,7 @@
       <workItem from="1639441958238" duration="1209000" />
       <workItem from="1639460173634" duration="8063000" />
       <workItem from="1639621177474" duration="1492000" />
+      <workItem from="1640134768252" duration="18000" />
     </task>
     <servers />
   </component>
