@@ -10,6 +10,7 @@
         "airbnb"
     ],
     "parser": "esprima",                            //解析器，ESLint 默认使用Espree作为其解析器
+    "parser": "babel-eslint",
     "parserOptions": {                              //在使用自定义解析器时，为了让 ESLint 在处理非 ECMAScript 5 特性时正常工作，配置属性 parserOptions 仍然是必须的。
         "ecmaFeatures": {                           //这是个对象，表示你想使用的额外的语言特性
             "globalReturn": false,                  //允许在全局作用域下使用 return 语句

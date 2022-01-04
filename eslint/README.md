@@ -63,14 +63,6 @@ eslint-plugin-react@^7.28.0 eslint-config-airbnb@latest eslint@^7.32.0 || ^8.2.0
 
 
 
-
-
-[TOC]
-
-
-
-
-
 # 配置项手册
 
 ## rules
