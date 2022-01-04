@@ -6,7 +6,7 @@
 
 
 
-`jQuery/menu`里是通过服务实现的，还包括`gulp`、`webpack`的应用。
+- `jQuery/menu`里是通过server服务开放public文件内容实现的，因此还包括`gulp`、`webpack`的打包方法。
 
-
+- `eslint`里是ESlint的相关用法和手册
 
