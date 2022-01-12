@@ -35,7 +35,8 @@
     },
     "globals": {                                    //配置全局变量
         "var1": "writable",                         //设置为 "writable" 以允许重写变量
-        "var2": "readonly"                          //设置为 "readonly" 不允许重写变量
+        "var2": "readonly",                         //设置为 "readonly" 不允许重写变量
+        "function": true
     },
     "plugins": [                                    //配置定义在插件中的一个规则的时候，你必须使用 插件名/规则ID 的形式。
         "plugin1"
