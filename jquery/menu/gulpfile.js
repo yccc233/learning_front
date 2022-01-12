@@ -64,7 +64,8 @@ console.log("gulp argv: ", argvs)
 // });
 //
 // gulp.task('default', gulp.series(
-//     'clean', gulp.parallel('htmls', 'webpack'),
+//     'clean', 
+//     gulp.parallel('htmls', 'webpack'),
 //     'server', done => {
 //         gulp.watch('./public/*', gulp.series('htmls', 'webpack'))
 //         gulp.watch('./src/**/*.js', gulp.series('webpack'));
