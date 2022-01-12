@@ -11,11 +11,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         increaseClick: () => dispatch({type: "INCREASE"}),
-        decreaseClick: () => dispatch({type: "DECREASE"})
+        decreaseClick: () => dispatch({type: "DECREASE"}),
+        increaseSelf: (count) => dispatch({type: "INCREASE", count: count}),                            //自带参数
+        decreaseSelf: (count) => dispatch({type: "DECREASE", count: count})                             //自带参数
     }
 }
 
-const MyBtns = (props) => {
+const MyBtns = () => {
 
     const dispatch = useDispatch();
 
