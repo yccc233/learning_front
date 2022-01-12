@@ -1,10 +1,10 @@
 
 require([
     "jquery",
-    "./count/calculate"
+    "calculate",
 ], function ($, cal) {
     $("#greet").click((event) => {
-        alert("你也好啊！")
+        alert("你也好啊！hh")
     });
     cal.initCounter();
     console.log("i am here! ")

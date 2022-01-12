@@ -8,7 +8,7 @@ define(["jquery"], function ($) {
             $("#counter").text(`计数 = ${num + 1}`)
         })
     }
-    
+
     return {
         initCounter: initCounter
     }
