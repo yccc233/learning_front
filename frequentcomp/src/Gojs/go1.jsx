@@ -24,7 +24,9 @@ function Go1() {
                 {
                     "undoManager.isEnabled": true, // enable Ctrl-Z to undo and Ctrl-Y to redo
                     layout: $(go.TreeLayout, // specify a Diagram.layout that arranges trees
-                        { angle: 90, layerSpacing: 35 })
+                        { angle: 90, layerSpacing: 35 }),
+                    allowDelete: false,
+                    allowCopy: false
                 });
         myDiagram.nodeTemplateMap.add("company", $(go.Node, "Auto",
             new go.Binding("background", "color"),
@@ -34,13 +36,12 @@ function Go1() {
 
         myDiagram.nodeTemplateMap.add("people", $(go.Node, "Auto",
             $(go.Shape, "Rectangle",
-                {strokeWidth: 1, stroke: "#000", fill: "#fff"},
-                ),
+                {strokeWidth: 1, stroke: "#000", fill: "#fff"}),
             $(go.Panel, "Table",
                 $(go.RowColumnDefinition, {column: 1, width: 10}),
                 $(go.TextBlock, { margin: 5, row: 0, font: "bold 20px sans-serif", stroke: '#333' }, new go.Binding("text", "name")),
-                $(go.TextBlock, { margin: 10, row: 1, font: "bold 14px sans-serif", stroke: '#da3838' }, new go.Binding("text", "money", function (v) {return `认证金额 ${v} 万人民币`;})),
-                $(go.TextBlock, { margin: 5, row: 2, font: "bold 14px sans-serif", stroke: '#325ece' }, new go.Binding("text", "anteil", function (v) {return `占比 ${v}`;}))
+                $(go.TextBlock, { margin: 5, row: 1, font: "12px sans-serif", stroke: '#da3838' }, new go.Binding("text", "money", function (v) {return `认证金额 ${v} 万人民币`;})),
+                $(go.TextBlock, { margin: 5, row: 2, font: "12px sans-serif", stroke: '#325ece' }, new go.Binding("text", "anteil", function (v) {return `占比 ${v}`;}))
             )
         ));
 
@@ -56,7 +57,7 @@ function Go1() {
     }, [])
 
     return <div id={"myDiagramDiv"} style={{
-        width: 600,
+        width: 1000,
         height: 400,
         border: "1px solid #000",
         margin: 20
