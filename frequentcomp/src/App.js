@@ -10,12 +10,16 @@ import Html2canvas from "./Html2canvas/Html2canvas";
 import ContextX from "./ContextMenu/Context";
 import MyModal from "./Modal/Modal";
 import DynaWin from "./Dynawin/DynaWin";
-import MyInput from "./Antd/Myinput";
+import MyInput from "./Input/Myinput";
+import MyTable2 from "./Table/MyTable2";
+import Myinput2 from "./Input/Myinput2";
+import JsonArea from "./TextArea/JsonArea";
+import FuncComs from "./FuncComs/entry";
+import Gojs from "./Gojs/entry";
 import "antd/dist/antd.css";
 
 
-function App(props) {
-
+function App() {
     return (
         <div style={{width: "100%"}}>
             {/*这里Switch 和 exact 用一个就够了*/}
@@ -23,10 +27,7 @@ function App(props) {
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
                     <Route path={"/dynawin"} component={DynaWin} />
-                    {/*<Route path={"/route"} component={MyRoute} />*/}
-                    <Route path={"/route"}>
-                        <MyRoute />
-                    </Route>
+                    <Route path={"/route"}><MyRoute /></Route>
                     <Route path={"/table"} component={MyTable} />
                     <Route path={"/form"} component={MyForm} />
                     <Route path={"/drag"} component={MyDrag} />
@@ -34,7 +35,12 @@ function App(props) {
                     <Route path={"/html2canvas"} component={Html2canvas} />
                     <Route path={"/contextmenu"} component={ContextX} />
                     <Route path={"/modal"} component={MyModal} />
-                    <Route path={"/antd/input"} component={MyInput} />
+                    <Route path={"/input"} component={MyInput} />
+                    <Route path={"/tablenew"} component={MyTable2} />
+                    <Route path={"/inputclear"} component={Myinput2} />
+                    <Route path={"/jsonarea"} component={JsonArea} />
+                    <Route path={"/reactfunc"} component={FuncComs} />
+                    <Route path={"/gojs"} component={Gojs} />
                 </Switch>
             </BrowserRouter>
         </div>
@@ -43,8 +49,23 @@ function App(props) {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
-        <h2>Input实时显示</h2>
+        <h2>gojs的图谱配置</h2>
+        <Link to={"/gojs"}>Go</Link>
+        <Block />
+        <h2>react函数组件</h2>
+        <Link to={"/reactfunc"}>Go</Link>
+        <Block />
+        <h2>JSON可视化</h2>
+        <Link to={"/jsonarea"}>Go</Link>
+        <Block />
+        <h2>表格2：可表内新增编辑</h2>
         <Link to={"/antd/input"}>Go</Link>
+        <Block />
+        <h2>Input实时显示</h2>
+        <Link to={"/input"}>Go</Link>
+        <Block />
+        <h2>Input按钮清空</h2>
+        <Link to={"/inputclear"}>Go</Link>
         <Block />
         <h2>路由</h2>
         <Link to={"/route"}>Go</Link>

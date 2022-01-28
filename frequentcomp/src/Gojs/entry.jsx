@@ -1,0 +1,29 @@
+import React from "react";
+import {BrowserRouter, Link, Route} from "react-router-dom";
+import Go1 from "./go1";
+import Go2 from "./go2";
+
+function Gojs() {
+    return <BrowserRouter  basename={"/gojs"}>
+        <Route path={'/'} exact component={Home} />
+        <Route path={"/go1"} component={Go1} />
+        <Route path={"/go2"} component={Go2} />
+    </BrowserRouter>
+}
+
+
+const Home = () => (
+    <div style={{textAlign: "center", margin: "50px 0"}}>
+        <h2>公司对人（仅查看）</h2>
+        <Link to={"/go1"}>Go</Link>
+        <Block />
+        <h2>公司对人（编辑）</h2>
+        <Link to={"/go2"}>Go</Link>
+        <Block />
+    </div>
+)
+
+const Block = () => <div style={{width: "100%", height: "50px"}}/>
+
+
+export default Gojs;

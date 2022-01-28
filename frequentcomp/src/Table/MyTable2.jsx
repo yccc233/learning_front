@@ -1,12 +1,13 @@
-
+/**
+ * 表格内添加数据，点击添加在表格内一行展示添加内容以及编辑保存等
+ */
 
 import React from "react";
-import {Table} from "antd";
-
+// eslint-disable-next-line
 const $ = require("jquery");
 
 export default class MyTable2 extends React.Component {
-    
+
     // constructor(props) {
     //     super(props);
     //     this.columns = [
@@ -44,14 +45,14 @@ export default class MyTable2 extends React.Component {
     //         dataSource: []
     //     }
     // }
-    
+
     // componentDidMount() {
     //     $.get("http://127.0.0.1:3005/filestream/getFile").then(res => {
     //         console.log(res)
     //         // this.setState()
     //     });
     // }
-    
+
     render() {
         return (
             <>

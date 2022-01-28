@@ -9,6 +9,7 @@
 - Html2canvas —— 基于javascript的截屏工具
 - Modal
 - 动态化窗口
+- react-json-view ——json可视化，[源码库](https://github.com/mac-s-g/react-json-view)
 
 
 

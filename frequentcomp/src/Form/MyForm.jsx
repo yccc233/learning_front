@@ -64,6 +64,7 @@ function MyForm() {
                 <Item
                     name={['user', 'name']}
                     label={"姓名"}
+                    tooltip={"tishi"}
                     rules={[{
                         required: true
                     }]}
