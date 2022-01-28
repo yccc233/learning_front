@@ -10,10 +10,10 @@ const $ = go.GraphObject.make;
 const bluegbk = '#1890FF';
 const whitebk = '#FFFFFF';
 const data = [
-    { key: "特斯拉xxxxxx", name: "特斯拉xxxxxx", color: bluegbk, category: "company" },
-    { key: "张安", parent:"特斯拉xxxxxx", name: "张安", money: 200, anteil: "10%", color: whitebk, category: "people" },
-    { key: "李四", parent:"特斯拉xxxxxx", name: "李四", money: 400, anteil: "60%", color: whitebk, category: "people" },
-    { key: "王五", parent:"特斯拉xxxxxx", name: "王五", money: 300, anteil: "30%", color: whitebk, category: "people" }
+    { key: "0", name: "特斯拉xxxxxx", color: bluegbk, category: "company" },
+    { key: "1", parent:"0", name: "张安", money: 200, anteil: "10%", color: whitebk, category: "people" },
+    { key: "2", parent:"0", name: "李四", money: 400, anteil: "60%", color: whitebk, category: "people" },
+    { key: "3", parent:"0", name: "王五", money: 300, anteil: "30%", color: whitebk, category: "people" }
 ];
 
 function Go1() {
@@ -24,7 +24,7 @@ function Go1() {
                 {
                     "undoManager.isEnabled": true, // enable Ctrl-Z to undo and Ctrl-Y to redo
                     layout: $(go.TreeLayout, // specify a Diagram.layout that arranges trees
-                        { angle: 90, layerSpacing: 35 }),
+                        { angle: 90, layerSpacing: 50, nodeSpacing: 100 }),
                     allowDelete: false,
                     allowCopy: false
                 });
@@ -39,21 +39,22 @@ function Go1() {
                 {strokeWidth: 1, stroke: "#000", fill: "#fff"}),
             $(go.Panel, "Table",
                 $(go.RowColumnDefinition, {column: 1, width: 10}),
-                $(go.TextBlock, { margin: 5, row: 0, font: "bold 20px sans-serif", stroke: '#333' }, new go.Binding("text", "name")),
+                $(go.TextBlock, { margin: 5, row: 0, font: "bold 16px sans-serif", stroke: '#333' }, new go.Binding("text", "name")),
                 $(go.Panel, "Horizontal",{margin: 5, row: 1},
                     $(go.TextBlock, "认证金额"),
-                    $(go.TextBlock, {stroke: '#da3838'}, new go.Binding("text", "money")),
+                    $(go.TextBlock, {stroke: '#da3838', margin: 2}, new go.Binding("text", "money")),
                     $(go.TextBlock, "万人民币")),
                 $(go.Panel, "Horizontal",{margin: 5, row: 2},
                     $(go.TextBlock, "占比"),
-                    $(go.TextBlock, {stroke: '#325ece'}, new go.Binding("text", "anteil")))
+                    $(go.TextBlock, {stroke: '#325ece', margin: 2}, new go.Binding("text", "anteil")))
             )
         ));
 
         myDiagram.linkTemplate =
             $(go.Link,
                 { routing: go.Link.Orthogonal, corner: 5 },
-                $(go.Shape, { strokeWidth: 3, stroke: "#555" })); // the link shape
+                $(go.Shape, { strokeWidth: 3, stroke: "#555" }));
+
         var model = $(go.TreeModel);
         model.nodeDataArray = data
         myDiagram.model = model;

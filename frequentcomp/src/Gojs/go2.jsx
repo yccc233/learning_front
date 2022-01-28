@@ -48,7 +48,7 @@ function Go2() {
             {
                 "undoManager.isEnabled": true, // enable Ctrl-Z to undo and Ctrl-Y to redo
                 layout: $(go.TreeLayout, // specify a Diagram.layout that arranges trees
-                    { angle: 90, layerSpacing: 35 }),
+                    { angle: 90, layerSpacing: 50, nodeSpacing: 100 }),
                 allowCopy: false
             });
         myDiagram.nodeTemplateMap.add("company", $(go.Node, "Auto",
