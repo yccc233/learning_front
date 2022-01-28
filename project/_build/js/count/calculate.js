@@ -1,0 +1,1 @@
+define(["jquery"],function(c){return{initCounter:function(){c("#counter").click(t=>{let e=c("#counter").text();var n=+e.slice(5);c("#counter").text("计数 = "+(1+n))})}}});

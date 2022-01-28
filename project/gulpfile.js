@@ -8,6 +8,7 @@ const minifyCSS = require("gulp-cssnano");
 const gulpPlumber = require("gulp-plumber");
 const shell = require("gulp-shell");
 const webpack = require("webpack");
+const exec = require("child_process").exec;
 const livereload = require('gulp-livereload'); // 网页自动刷新（文件变动后即时刷新页面）
 const webserver = require('gulp-webserver'); // 本地服务器
 const fs = require("fs");
@@ -33,8 +34,7 @@ function plumber() {
 
 gulp.task("clean", done => {
     if (fs.existsSync(buildPath)) {
-        gulp.src(buildPath)
-            .pipe(clean());
+        exec("rm -rf _build/");
     }
     done();
 });
@@ -72,14 +72,18 @@ gulp.task("less", function (done) {
         .pipe(gulp.dest(buildPath + "css"));
     done();
 });
-gulp.task("webpack", function (done) {
+gulp.task("pack", function (done) {
+
+    done();
+});
+gulp.task("webpack", gulp.series(["pack"], function (done) {
     webpack(require("./webpack.config"), function (err, stat) {
         if (err) {
             gutil.log(stat.toString())
         }
         done();
     })
-});
+}));
 
 // 注册任务
 gulp.task('webserver', function() {
@@ -88,6 +92,11 @@ gulp.task('webserver', function() {
             livereload: true, // 启用LiveReload
             open: true // 服务器启动时自动打开网页
         }));
+});
+
+gulp.task("express", function (done) {
+    exec("node app.js");
+    gutil.log("express is running!")
 });
 
 // 监听任务
@@ -102,7 +111,7 @@ gulp.task('watch',function(){
     gulp.watch('src/js/**/*.js', ['js']);
 });
 
-gulp.task("default", gulp.series("clean", gulp.parallel(["html", "js", "css", "less"]), function (done) {
+gulp.task("default", gulp.series("clean", [gulp.parallel(["html", "js", "css", "less"]), "express"], function (done) {
     gutil.log(gutil.colors.green("default is done!"));
     done();
 }));

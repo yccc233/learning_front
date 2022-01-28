@@ -7,9 +7,6 @@ $ eslint init
 ```
 
 # app.js
-
-
-
 ```javascript
 var express = require("express");
 var app = express();
