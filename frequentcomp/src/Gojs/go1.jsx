@@ -40,8 +40,13 @@ function Go1() {
             $(go.Panel, "Table",
                 $(go.RowColumnDefinition, {column: 1, width: 10}),
                 $(go.TextBlock, { margin: 5, row: 0, font: "bold 20px sans-serif", stroke: '#333' }, new go.Binding("text", "name")),
-                $(go.TextBlock, { margin: 5, row: 1, font: "12px sans-serif", stroke: '#da3838' }, new go.Binding("text", "money", function (v) {return `认证金额 ${v} 万人民币`;})),
-                $(go.TextBlock, { margin: 5, row: 2, font: "12px sans-serif", stroke: '#325ece' }, new go.Binding("text", "anteil", function (v) {return `占比 ${v}`;}))
+                $(go.Panel, "Horizontal",{margin: 5, row: 1},
+                    $(go.TextBlock, "认证金额"),
+                    $(go.TextBlock, {stroke: '#da3838'}, new go.Binding("text", "money")),
+                    $(go.TextBlock, "万人民币")),
+                $(go.Panel, "Horizontal",{margin: 5, row: 2},
+                    $(go.TextBlock, "占比"),
+                    $(go.TextBlock, {stroke: '#325ece'}, new go.Binding("text", "anteil")))
             )
         ));
 
