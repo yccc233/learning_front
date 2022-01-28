@@ -21,13 +21,13 @@ function MyInput(props) {
     }, []);
 
     return <div style={{padding: "10px 100px"}}>
-        <Input onChange={e => setContent1(e.target.value)} />
+        <Input onChange={e => setContent1(e.target.value)} placeholder={"实时显示"}/>
         <br />
         <div>
             {content1}
         </div>
         <br /><br /><br />
-        <Input onChange={delayResponse} />
+        <Input onChange={delayResponse} placeholder={"延时一秒显示"}/>
         <br />
         <div>
             {content2}
