@@ -2,7 +2,7 @@
  * 公司对人（编辑）
  */
 
-import React, {useCallback, useEffect, useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import go from "gojs"
 import {Button} from "antd";
 
@@ -25,18 +25,18 @@ function SplitstrFromStr(str, type) {
 function Go2() {
     const diagram = useRef();
 
-    const addPeople = useCallback(() => {
+    const addPeople = () => {
         var myDiagram = diagram.current;
         myDiagram.model.addNodeData({key: "" + JSON.parse(diagram.current.model.toJson()).nodeDataArray.length, parent:"0", name: "xxxxxx", money: 0, anteil: "0%", color: whitebk, category: "people"});
-    });
+    }
 
-    const onCommit = useCallback(() => {
+    const onCommit = () => {
         let myDiagram = diagram.current;
         console.log("获取所有节点", JSON.parse(myDiagram.model.toJson()).nodeDataArray)
-    })
+    }
 
 
-    const onChange = useCallback((textBlock, previousText, currentText, type) => {
+    const onChange = (textBlock, previousText, currentText, type) => {
         if (previousText === currentText) return;
         let pv = SplitstrFromStr(previousText, type),
             cv = SplitstrFromStr(currentText, type);
@@ -46,7 +46,7 @@ function Go2() {
             diagram.current.model.setDataProperty(node, type, type === "money" ? +cv : cv);
         }
         else console.log("错误：找不到节点！")
-    })
+    }
 
 
     useEffect(() => {

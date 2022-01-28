@@ -1,9 +1,11 @@
 import React, {useState, useEffect, useCallback} from "react"
+import {Button} from "antd";
 
 var count = 0;
 
 function Usecallback() {
     const [val, setVal] = useState("emmm");
+    const [co, setCo] = useState(0);
 
     const getData = useCallback(() => {
         console.log("getData 渲染")
@@ -13,8 +15,16 @@ function Usecallback() {
         }, 1000)
     }, []);
 
+    const funn = () => {
+        console.log("funn 渲染")
+    }
+
     return (
-        <Child val={val} getData={getData} />
+        <div>
+            <Child val={val} getData={getData} />
+            <hr/>
+            <Button type={"primary"} onClick={() => setCo(pre => pre+1)}>点我 +1 浅渲染组件 (当前为{co})</Button>
+        </div>
     );
 }
 
