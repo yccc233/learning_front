@@ -59,7 +59,7 @@ const Home = () => {
         <Link to={"/jsonarea"}>Go</Link>
         <Block />
         <h2>表格2：可表内新增编辑</h2>
-        <Link to={"/antd/input"}>Go</Link>
+        <Link to={"/tablenew"}>Go</Link>
         <Block />
         <h2>Input实时显示</h2>
         <Link to={"/input"}>Go</Link>
