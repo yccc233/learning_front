@@ -32,7 +32,6 @@ const link = [
     { from: "4", to: "1", text: "hhhhhhh" },
     { from: "4", to: "5", text: "hhhhhhhh" },
     { from: "3", to: "特斯拉", text: "hhhhhhhhhh" },
-
 ]
 
 function Go3() {
@@ -52,12 +51,12 @@ function Go3() {
                     //     var cntr = myDiagram.findNodeForKey("特斯拉");
                     //     cntr.location = myDiagram.layout.actualCenter;
                     // }
-                });
+                })
 
         myDiagram.nodeTemplate = $(go.Node, "Auto",
             $(go.Shape, "Rectangle",
                 {strokeWidth: 1, stroke: "#000"},
-                new go.Binding("fill", "color"),
+                new go.Binding("fill", "color")
             ),
             $(go.TextBlock, { margin: 20, font: "bold 24px sans-serif" },
                 new go.Binding("text", "name"),

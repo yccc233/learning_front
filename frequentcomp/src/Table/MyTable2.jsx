@@ -49,6 +49,7 @@ export default function  MyTable2 () {
                         }}>保存</Button>
                         <Button type={"link"} onClick={() => {
                             setEdited(null)
+                            //不用改，取消或新增后调取后端服务刷新表格，不会造成脏数据
                         }}>取消</Button>
                     </div>) : (<div>
                         <Button type={"link"} disabled={!!editedKey} onClick={() => {
@@ -105,7 +106,7 @@ export default function  MyTable2 () {
         <div style={{margin: 50}}>
             <Form form={form} component={false}>
                 <Button type={"primary"} disabled={!!editedKey} onClick={() => {
-                    const key = ""+dataSource.length+1;
+                    const key = "" + dataSource.length+1;
                     setDataSource([{key: key, name: '',age: 0, address: ''}, ...dataSource])
                     setEdited(key)
                 }}>新增成员</Button>
@@ -154,7 +155,7 @@ export default function  MyTable2 () {
                     bordered
                     dataSource={dataSource}
                     columns={mColumns}
-                    rowClassName="editable-row"
+                    // rowClassName="editable-row"
                 />
             </Form>
         </div>

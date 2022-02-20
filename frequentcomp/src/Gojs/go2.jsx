@@ -21,7 +21,7 @@ function Go2() {
     const diagram = useRef();
 
     const addPeople = () => {
-        var myDiagram = diagram.current;
+        let myDiagram = diagram.current;
         let nodeArr = JSON.parse(diagram.current.model.toJson()).nodeDataArray;
         myDiagram.model.addNodeData({key: +nodeArr[nodeArr.length - 1].key + 1 + '', parent:"0", name: "[\\输入姓名]", money: 0, anteil: "0%", color: whitebk, category: "people"});
     }
@@ -34,10 +34,12 @@ function Go2() {
 
     const onChange = (textBlock, previousText, currentText, type) => {
         if (previousText === currentText) return;
-        let nodeData = JSON.parse(diagram.current.model.toJson()).nodeDataArray.find(arr => arr[type] == previousText);
+        let myDiagram = diagram.current;
+        // eslint-disable-next-line
+        let nodeData = JSON.parse(myDiagram.model.toJson()).nodeDataArray.find(arr => arr[type] == previousText);
         if (nodeData) {
-            let node = diagram.current.model.findNodeDataForKey(nodeData.key);
-            diagram.current.model.setDataProperty(node, type, type === "money" ? +currentText : currentText);
+            let node = myDiagram.model.findNodeDataForKey(nodeData.key);
+            myDiagram.model.setDataProperty(node, type, type === "money" ? +currentText : currentText);
         }
         else console.log("错误：找不到节点！")
     }
@@ -63,15 +65,11 @@ function Go2() {
             $(go.Shape, "Rectangle",
                 {strokeWidth: 1, stroke: "#000", fill: "#fff"},
             ),
-            // $(go.Panel, "Table",
-            //     $(go.RowColumnDefinition, {column: 3, width: 10}),
-            //         $(go.TextBlock, { margin: 5, row: 0, font: "bold 20px sans-serif", stroke: '#333', editable: true, textEdited: (a,b,c) => onChange(a,b,c,"name") }, new go.Binding("text", "name")),
-            //         $(go.TextBlock, { margin: 5, row: 1, font: "12px sans-serif", stroke: '#da3838', editable: true, textEdited: (a,b,c) => onChange(a,b,c,"money") }, new go.Binding("text", "money", function (v) {return `认证金额 ${v} 万人民币`;})),
-            //         $(go.TextBlock, { margin: 5, row: 2, font: "12px sans-serif", stroke: '#325ece', editable: true, textEdited: (a,b,c) => onChange(a,b,c,"anteil") }, new go.Binding("text", "anteil", function (v) {return `占比 ${v}`;}))
-            // )
             $(go.Panel, "Table",
                 $(go.RowColumnDefinition, {column: 1, width: 10}),
                 $(go.TextBlock, { margin: 5, row: 0, font: "bold 20px sans-serif", stroke: '#333', editable: true, textEdited: (a,b,c) => onChange(a,b,c,"name") }, new go.Binding("text", "name")),
+                //或者使用makeTwoWay方法来跟踪变化
+                // $(go.TextBlock, { margin: 5, row: 0, font: "bold 20px sans-serif", stroke: '#333', editable: true }, new go.Binding("text", "name").makeTwoWay()),
                 $(go.Panel, "Horizontal",{margin: 5, row: 1},
                     $(go.TextBlock, "认证金额"),
                     $(go.TextBlock, {stroke: '#da3838', editable: true, textEdited: (a,b,c) => onChange(a,b,c,"money")}, new go.Binding("text", "money")),

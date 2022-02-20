@@ -16,6 +16,7 @@ import Myinput2 from "./Input/Myinput2";
 import JsonArea from "./TextArea/JsonArea";
 import FuncComs from "./FuncComs/entry";
 import Gojs from "./Gojs/entry";
+import TinyMain from "./Tiny/Main";
 import "antd/dist/antd.css";
 
 
@@ -41,6 +42,7 @@ function App() {
                     <Route path={"/jsonarea"} component={JsonArea} />
                     <Route path={"/reactfunc"} component={FuncComs} />
                     <Route path={"/gojs"} component={Gojs} />
+                    <Route path={"/tinymain"} component={TinyMain} />
                 </Switch>
             </BrowserRouter>
         </div>
@@ -49,6 +51,9 @@ function App() {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
+        <h2>小组件的配置或自定义</h2>
+        <Link to={"/tinymain"}>Go</Link>
+        <Block />
         <h2>gojs的图谱配置</h2>
         <Link to={"/gojs"}>Go</Link>
         <Block />

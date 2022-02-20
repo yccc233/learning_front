@@ -15,10 +15,6 @@ function Usecallback() {
         }, 1000)
     }, []);
 
-    const funn = () => {
-        console.log("funn 渲染")
-    }
-
     return (
         <div>
             <Child val={val} getData={getData} />
