@@ -4,7 +4,7 @@ import MyBut from "./ele";
 
 
 const mapStateToProps = (state) => {
-    console.log(state)
+    console.log("state", state)
     return {value: state.value}
 }
 
@@ -32,7 +32,7 @@ const MyBtns = () => {
 
 class App extends React.Component {
     render() {
-        console.log(this.props)
+        console.log("App props", this.props)
         const {value, increaseClick,decreaseClick} = this.props;
         return (
             <div style={{
