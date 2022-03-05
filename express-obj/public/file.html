@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>文件上传</title>
+  <script src="../package/jquery.js"></script>
+  <script src="../package/fileSaver.js"></script>
+
+  <script type="text/javascript">
+    var $ = jQuery;
+
+    function arrayBufferToBytes(buffer) {
+      return new Uint8Array(buffer);
+    }
+
+    function analyse() {
+      const file = document.getElementById('input_file2').files[0];
+      console.log(file)
+      let fileReader = new FileReader();
+      fileReader.readAsArrayBuffer(file);
+      fileReader.onload = function(){
+        var form = new FormData();
+        let results = arrayBufferToBytes(this.result)
+        console.log("结果集", typeof results, Array.isArray(results), results )
+        form.append("fileType", file.type);
+        form.append("fileName", file.name);
+        form.append("fileStream", results);
+        $.ajax({
+          type: 'POST',
+          url: "/file/upload",
+          data: form,
+          cache: false,
+          processData: false,
+          contentType: false,
+          success: function (res) {
+            res = JSON.parse(res);
+            if (res.code === 0) {
+              console.log(res.msg);
+            } else {
+              console.log(res.msg);
+            }
+          },
+          error: function (errMsg) {
+            console.error("上传失败：", errMsg);
+          }
+        });
+      }
+
+
+    }
+
+    function saveFile() {
+      $.post("/file/download", {}).done(res => {
+        console.log(res)
+        res = JSON.parse(res)
+        if (res.code === 0)  {
+          var data = new Blob([res.data.fileStream], { type: res.data.fileType });
+          saveAs(data, res.data.fileName);
+          // document.getElementById("test_img").src = res.data.fileStream
+        } else {
+          console.error("下载失败：", res.msg);
+        }
+
+      });
+    }
+
+  </script>
+</head>
+<body>
+<input id="input_file2" type="file" name="ycc">
+<button onclick="analyse()">上传</button>
+<button onclick="saveFile()">转存</button>
+<br>
+<div id="show_file">
+</div>
+
+</body>
+</html>
