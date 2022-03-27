@@ -5,31 +5,34 @@ import {Link} from "react-router-dom";
 import "./myform.css";
 
 const $ = require("jquery");
+const Item = Form.Item;
 
 function MyForm() {
 
     const onFinish = (values) => {
         console.log(values)
-        $.post("http://127.0.0.1:3005/filestream/writeFile", {data: JSON.stringify(values)}).then(res => {
-            res = JSON.parse(res)
-            if (res.code === 0) {
-                notification["success"]({
-                    message: "成功啦！"
-                });
-            } else {
-                notification["error"]({
-                    message: "有个问题！",
-                    description: res.message
-                });
-            }
-        }).catch(reason => {
-            notification["error"]({
-                message: "没有这个服务啊！"
-            })
-        });
+        // $.post("http://127.0.0.1:3005/filestream/writeFile", {data: JSON.stringify(values)}).then(res => {
+        //     res = JSON.parse(res)
+        //     if (res.code === 0) {
+        //         notification["success"]({
+        //             message: "成功啦！"
+        //         });
+        //     } else {
+        //         notification["error"]({
+        //             message: "有个问题！",
+        //             description: res.message
+        //         });
+        //     }
+        // }).catch(reason => {
+        //     notification["error"]({
+        //         message: "没有这个服务啊！"
+        //     })
+        // });
+
+        var tmp = values.name?.title;
+        console.log(tmp)
     }
 
-    const Item = Form.Item;
 
     const layout = {
         labelCol: {
@@ -76,7 +79,7 @@ function MyForm() {
                     label={"性别"}
                     initialValue={"nan"}
                 >
-                    <Radio.Group defaultValue={"nan"}>
+                    <Radio.Group >
                         <Radio value={"nan"}>未知</Radio>
                         <Radio value={"male"}>男</Radio>
                         <Radio value={"female"}>女</Radio>
@@ -92,7 +95,7 @@ function MyForm() {
                         max: 1000
                     }]}
                 >
-                    <InputNumber defaultValue={21}/>
+                    <InputNumber />
                 </Item>
                 <Item
                     name={["user", "email"]}

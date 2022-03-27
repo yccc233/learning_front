@@ -16,7 +16,7 @@ import Myinput2 from "./Input/Myinput2";
 import JsonArea from "./TextArea/JsonArea";
 import FuncComs from "./FuncComs/entry";
 import Gojs from "./Gojs/entry";
-import TinyMain from "./Tiny/Main";
+import TinyMain from "./Tiny";
 import "antd/dist/antd.css";
 
 
