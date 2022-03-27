@@ -11,3 +11,5 @@
 - `packing `打包方法
 - `package`保存官方的js文件
 
+- `project`里面是一个项目工程的基础零件
+
