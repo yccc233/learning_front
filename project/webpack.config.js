@@ -13,8 +13,8 @@ const config = {
   entry: "./src/js/index.js",
   output: {
     path: path.resolve("_build"),
-    publicPath: path.resolve("_build"),
-    filename: './js/[name].js',
+    // publicPath: path.resolve("_build"),
+    filename: 'js/[name].js',
     chunkFilename: './chunk/[name].js'
   },
   devServer: {

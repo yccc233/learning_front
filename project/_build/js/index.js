@@ -1,1 +1,0 @@
-require(["jquery","calculate"],function(e,n){e("#greet").click(e=>{alert("你也好啊！hh")}),n.initCounter(),console.log("i am here! ");e(document).ready(function(){e.i18n.normaliseLanguageCode({})})});

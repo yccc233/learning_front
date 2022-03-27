@@ -1,7 +1,16 @@
 
 [TOC]
 
+# 启动
+
+```shell
+$ gulp
+```
+
+
+
 # .eslintrc.json
+
 ```shell
 $ eslint init
 ```
