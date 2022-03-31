@@ -17,6 +17,7 @@ import JsonArea from "./TextArea/JsonArea";
 import FuncComs from "./FuncComs/entry";
 import Gojs from "./Gojs/entry";
 import TinyMain from "./Tiny";
+import WindowCom from "./window";
 import "antd/dist/antd.css";
 
 
@@ -27,6 +28,7 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
+                    <Route path={"/window"} component={WindowCom} />
                     <Route path={"/dynawin"} component={DynaWin} />
                     <Route path={"/route"}><MyRoute /></Route>
                     <Route path={"/table"} component={MyTable} />
@@ -51,6 +53,9 @@ function App() {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
+        <h2>window自带的组件</h2>
+        <Link to={"/window"}>Go</Link>
+        <Block />
         <h2>小组件的配置或自定义</h2>
         <Link to={"/tinymain"}>Go</Link>
         <Block />
@@ -93,7 +98,7 @@ const Home = () => {
         <h2>右键菜单</h2>
         <Link to={"/contextmenu"}>Go</Link>
         <Block />
-        <h2>弹窗</h2>
+        <h2>antd弹窗</h2>
         <Link to={"/modal"}>Go</Link>
     </div>
 }

@@ -1,10 +1,9 @@
 
-import {Button, Form, Input, InputNumber, notification, Radio} from "antd";
+import {Button, Form, Input, InputNumber, Radio} from "antd";
 import TextArea from "antd/es/input/TextArea";
 import {Link} from "react-router-dom";
 import "./myform.css";
 
-const $ = require("jquery");
 const Item = Form.Item;
 
 function MyForm() {
