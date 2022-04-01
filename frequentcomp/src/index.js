@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
+import {ConfigProvider} from "antd";
+import zhCN from "antd/lib/locale-provider/zh_CN"
+import "antd/dist/antd.css";
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter basename={"/"}>
-            <App />
-        </BrowserRouter>
+        <ConfigProvider
+            locale={zhCN}
+            // prefixCls={"frequentCls"}
+        >
+            <BrowserRouter basename={"/"}>
+                <App />
+            </BrowserRouter>
+        </ConfigProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

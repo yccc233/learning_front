@@ -17,18 +17,18 @@ import JsonArea from "./TextArea/JsonArea";
 import FuncComs from "./FuncComs/entry";
 import Gojs from "./Gojs/entry";
 import TinyMain from "./Tiny";
-import WindowCom from "./window";
-import "antd/dist/antd.css";
-
+import WindowCom from "./window/win_com";
+import WinDiv from "./window/win_div";
 
 function App() {
     return (
-        <div style={{width: "100%"}}>
+        <div style={{width: "100%", height: "100%"}}>
             {/*这里Switch 和 exact 用一个就够了*/}
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
-                    <Route path={"/window"} component={WindowCom} />
+                    <Route path={"/windowdiv"} component={WinDiv} />
+                    <Route path={"/windowcom"} component={WindowCom} />
                     <Route path={"/dynawin"} component={DynaWin} />
                     <Route path={"/route"}><MyRoute /></Route>
                     <Route path={"/table"} component={MyTable} />
@@ -53,10 +53,13 @@ function App() {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
-        <h2>window自带的组件</h2>
-        <Link to={"/window"}>Go</Link>
+        <h2>div随页面变化</h2>
+        <Link to={"/windowdiv"}>Go</Link>
         <Block />
-        <h2>小组件的配置或自定义</h2>
+        <h2>window自带的组件</h2>
+        <Link to={"/windowcom"}>Go</Link>
+        <Block />
+        <h2>小组件的配置或自定义(文本略缩)</h2>
         <Link to={"/tinymain"}>Go</Link>
         <Block />
         <h2>gojs的图谱配置</h2>
