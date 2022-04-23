@@ -12,7 +12,7 @@ export default class OfficeView extends Component {
         super(props);
         this.state = {
             isSee: false,
-            files: ['pdf', 'doc', 'docx']
+            files: ['pdf', 'doc', 'docx', 'xls']
         };
         this.formRef = createRef();
     }
