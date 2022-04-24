@@ -2,11 +2,15 @@
 import {Button, Form, Input, InputNumber, Radio} from "antd";
 import TextArea from "antd/es/input/TextArea";
 import {Link} from "react-router-dom";
+import $ from "jquery";
 import "./myform.css";
+import { useState } from "react";
 
 const Item = Form.Item;
 
 function MyForm() {
+
+    const  [validataStatus, setValidateStatus] =  useState(null);
 
     const onFinish = (values) => {
         console.log(values)
@@ -57,6 +61,27 @@ function MyForm() {
         }
     }
 
+    const nameValidate = (value) => {
+        setValidateStatus("validating");
+        return new Promise((resolve, reject) => {
+            $.post("http://127.0.0.1:3005/antdform/validatename", {name: value}).done(res => {
+                res = JSON.parse(res);
+                if (res.code === 0) {
+                    if (res.data.status) {
+                        setValidateStatus("error");
+                        reject(`当前姓名已经录入，请联系创建人-${res.data.creator && res.data.creator.name}`);
+                    } else {
+                        setValidateStatus("success");
+                        resolve();
+                    }
+                } else {
+                    setValidateStatus("error");
+                    reject("服务异常");
+                }
+            })
+        });
+    };
+
     return <>
         <div style={{padding: "50px 500px"}}>
             <span className={"back-link"}>
@@ -67,8 +92,15 @@ function MyForm() {
                     name={['user', 'name']}
                     label={"姓名"}
                     tooltip={"tishi"}
+                    validateTrigger={"onBlur"}
+                    validateStatus={validataStatus}
+                    hasFeedback
                     rules={[{
                         required: true
+                    }, {
+                        validator: (_, value) => {
+                            return value === '' ? Promise.resolve() : nameValidate(value);
+                        }
                     }]}
                 >
                     <Input />
