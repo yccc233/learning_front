@@ -12,7 +12,6 @@ ReactDOM.render(
     <React.StrictMode>
         <ConfigProvider
             locale={zhCN}
-            // prefixCls={"frequentCls"}
         >
             <BrowserRouter basename={"/"}>
                 <App />

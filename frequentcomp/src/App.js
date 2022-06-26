@@ -19,6 +19,7 @@ import Gojs from "./Gojs/entry";
 import TinyMain from "./Tiny";
 import WindowCom from "./window/win_com";
 import WinDiv from "./window/win_div";
+import RelationsGraph from "./RelationsGraph";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
+                    <Route path={"/relationsgraph"} component={RelationsGraph} />
                     <Route path={"/windowdiv"} component={WinDiv} />
                     <Route path={"/windowcom"} component={WindowCom} />
                     <Route path={"/dynawin"} component={DynaWin} />
@@ -53,6 +55,9 @@ function App() {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
+        <h2>关系图调研</h2>
+        <Link to={"/relationsgraph"}>Go</Link>
+        <Block />
         <h2>div随页面变化</h2>
         <Link to={"/windowdiv"}>Go</Link>
         <Block />

@@ -11,10 +11,9 @@ app.use(express.urlencoded({extended: true}));
 
 // app.use(express.static("./public"));
 // app.use("/static", express.static("./public"));
-// app.use("/package", express.static("./package"));
-
 
 app.use("/antdform", require("./api/form"));
+app.use("/relationgraph", require("./api/form"));
 
 app.listen(app.get('port'), () => {
     console.log(`start the server at: http://127.0.0.1:${app.get('port')}/`);
