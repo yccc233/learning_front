@@ -9,8 +9,12 @@
 ## 1. 饼图类似设计，点击后可以扩展的
 
 [https://echarts.apache.org/zh/option.html#series-sunburst.nodeClick](https://echarts.apache.org/zh/option.html#series-sunburst.nodeClick)
-   ![](_reademe/pic1.png)
+   ![](.reademe/pic1.png)
 
 ## 2. 交互性设计，可以看下这篇CSDN
 
 [https://blog.csdn.net/weixin_43239880/article/details/123096344](https://blog.csdn.net/weixin_43239880/article/details/123096344)
+
+## 3. D3图
+
+[https://d3js.org/](https://d3js.org/)

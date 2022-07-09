@@ -8,9 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gojs/entry.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gojs/entry.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/_reademe/pic1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/.reademe/pic1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/rg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/rg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -146,7 +148,9 @@
       <workItem from="1648710393015" duration="4867000" />
       <workItem from="1648782510105" duration="5395000" />
       <workItem from="1656120989833" duration="823000" />
-      <workItem from="1656252690229" duration="6702000" />
+      <workItem from="1656252690229" duration="7156000" />
+      <workItem from="1656728883279" duration="3400000" />
+      <workItem from="1657376826801" duration="4357000" />
     </task>
     <servers />
   </component>

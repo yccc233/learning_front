@@ -74,7 +74,7 @@ export default function init() {
 
     myChart.on('click',function(params) {
         console.log('点击事件', params)
-        if (params.data.id == "lyc") {
+        if (params.data.id === "lyc") {
             data.push(
                 {
                     id: "xpz",
