@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +148,7 @@
       <workItem from="1656728883279" duration="3400000" />
       <workItem from="1657376826801" duration="4803000" />
       <workItem from="1657958341858" duration="5751000" />
+      <workItem from="1659529418397" duration="3957000" />
     </task>
     <servers />
   </component>
