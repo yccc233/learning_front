@@ -20,6 +20,7 @@ import TinyMain from "./Tiny";
 import WindowCom from "./window/win_com";
 import WinDiv from "./window/win_div";
 import RelationsGraph from "./RelationsGraph";
+import {RelationsExpandModal} from "./customRelations/index3";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
+                    <Route path={"/customrelations"} component={RelationsExpandModal} />
                     <Route path={"/relationsgraph"} component={RelationsGraph} />
                     <Route path={"/windowdiv"} component={WinDiv} />
                     <Route path={"/windowcom"} component={WindowCom} />
@@ -55,6 +57,9 @@ function App() {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
+        <h2>自定义图谱</h2>
+        <Link to={"/customrelations"}>Go</Link>
+        <Block />
         <h2>关系图调研</h2>
         <Link to={"/relationsgraph"}>Go</Link>
         <Block />

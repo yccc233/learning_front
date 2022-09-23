@@ -203,6 +203,7 @@
     border: 1px solid #e3e4e5;
     background: #fff;
     box-shadow: 4px 4px 4px -2px #666;
+    z-index: 2048;
 }
 .contextMenu-roc .menu-item-roc {
     padding: 6px 16px;

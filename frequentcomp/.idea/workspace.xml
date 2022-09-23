@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../css/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../css/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RelationsGraph/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/rg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/rg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +55,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yudeng/learn_front/frequentcomp/src/RelationsGraph&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yudeng/learn_front/frequentcomp/public/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -61,11 +66,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/src/RelationsGraph" />
       <recent name="$PROJECT_DIR$/src/Gojs" />
       <recent name="$PROJECT_DIR$/src/Html2canvas" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/Form" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/source" />
@@ -149,6 +154,9 @@
       <workItem from="1657376826801" duration="4803000" />
       <workItem from="1657958341858" duration="5751000" />
       <workItem from="1659529418397" duration="3957000" />
+      <workItem from="1663757707309" duration="4433000" />
+      <workItem from="1663854553232" duration="7101000" />
+      <workItem from="1663893114407" duration="2689000" />
     </task>
     <servers />
   </component>

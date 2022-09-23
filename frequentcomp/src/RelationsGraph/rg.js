@@ -10,55 +10,28 @@ export default function init() {
         {
             id: "lyc",
             name: '老于哼',
-            children: [
-                {
-                    id: "lycname",
-                    value: 1,
-                    name: '姓名',
-                    children: []
-                },
-                {
-                    id: "lycage",
-                    value: 1,
-                    name: '年龄',
-                    children: []
-                },
-                {
-                    id: "lycaddress",
-                    value: 1,
-                    name: '工作地址',
-                    children: []
-                }
-            ]
-        },
-        // {
-        //     name: "小胖子",
-        //     children: [
-        //         {
-        //             value: 1,
-        //             name: '年龄',
-        //             children: []
-        //         },
-        //         {
-        //             value: 1,
-        //             name: '年龄',
-        //             children: []
-        //         },
-        //         {
-        //             value: 1,
-        //             name: '地址',
-        //             children: []
-        //         }
-        //     ]
-        // }
+            children: [{
+                id: "lycname",
+                value: 1,
+                name: '姓名',
+                children: []
+            }, {
+                id: "lycage",
+                value: 1,
+                name: '年龄',
+                children: []
+            }, {
+                id: "lycaddress",
+                value: 1,
+                name: '工作地址',
+                children: []
+            }]
+        }
     ];
 
     var option = {
         series: {
             type: 'sunburst',
-            // emphasis: {
-            //     focus: 'ancestor'
-            // },
             data: data,
             radius: [0, '60%'],
             label: {
@@ -70,6 +43,7 @@ export default function init() {
             },
         }
     };
+
     option && myChart.setOption(option);
 
     myChart.on('click',function(params) {
@@ -102,7 +76,5 @@ export default function init() {
             option.data = data;
             option && myChart.setOption(option);
         }
-
-        // window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(params.name));
     });
 }
