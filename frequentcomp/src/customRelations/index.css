@@ -1,0 +1,63 @@
+.relations_explore {
+    position: relative;
+
+    #nodeContextMenu {
+        position: absolute;
+        border: 1px solid #ccc;
+        background: #fff;
+        box-shadow: 3px 3px 3px -1px #666;
+        display: none;
+        z-index: 1;
+        padding: 2px;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                padding: 0 5px;
+                transition: all .2s;
+                cursor: pointer;
+                white-space: nowrap;
+                border-radius: 3px;
+
+                &:hover {
+                    background: #ddd;
+                }
+            }
+
+            li.prop {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .legend {
+        width: 100px;
+        height: 125px;
+        border: 1px solid #ccc;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000;
+        color: #fff;
+        opacity: 0.5;
+        backdrop-filter: blur(10px);
+        padding: 5px;
+
+        .circle {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #699af9;
+            background: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+        }
+
+        .image {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

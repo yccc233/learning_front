@@ -5,7 +5,7 @@
   "dependencies": {
     "@ant-design/graphs": "^1.1.4",
     "@ant-design/icons": "^4.7.0",
-    "@antv/g6": "^4.7.4",
+    "@antv/g6": "^3.5.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -54,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
   }
 }
