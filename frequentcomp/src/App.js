@@ -29,7 +29,7 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
-                    <Route path={"/customrelations"} component={Relation} />
+                    <Route path={"/customrelations"} render={() => <Relation height={800}/>} />
                     <Route path={"/relationsgraph"} component={RelationsGraph} />
                     <Route path={"/windowdiv"} component={WinDiv} />
                     <Route path={"/windowcom"} component={WindowCom} />
