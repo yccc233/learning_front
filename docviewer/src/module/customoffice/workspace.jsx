@@ -5,6 +5,7 @@ import Text from './text';
 import ErrorHappened from "../errorboundary";
 import "../../css/workspace.css";
 import $ from "jquery";
+import Pdf from './pdf';
 
 class Workspace extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Workspace extends Component {
             showFile: false,
             fileData: null
         }
-        this.args = { fileId: "123456", fileType: "txt", fileName: "测试" };
+        this.args = { fileId: "123456", fileType: "pdf", fileName: "测试" };
         this.componentType = this.args.fileType;
 
         this.analyse = this.analyse.bind(this);
@@ -85,14 +86,18 @@ class Workspace extends Component {
         if (this.componentType == "txt") {
             docCom = <Text fileStream={fileData && fileData.fileStream} type="text" />;
         }
+        if (this.componentType == "pdf") {
+            docCom  = <Pdf />
+        }
         return <ErrorHappened>
-            <div className='headline'>
+            {/* <div className='headline'>
                 <input id="input_file2" type="file" name="ycc" />
                 <button onClick={this.analyse}>上传</button>
                 <button onClick={this.showFile}>预览</button>
-            </div>
+            </div> */}
             <div className='showfile'>
-                {showFile && docCom}
+                {/* {showFile && docCom} */}
+                {docCom}
             </div>
         </ErrorHappened>;
     }
