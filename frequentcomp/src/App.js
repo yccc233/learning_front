@@ -1,6 +1,6 @@
 import './App.css';
 
-import {withRouter, Route, Switch, Link, Redirect, BrowserRouter} from "react-router-dom";
+import { withRouter, Route, Switch, Link, Redirect, BrowserRouter } from "react-router-dom";
 // import {IndexRoute} from "react-router";
 import MyRoute from "./Route/MyRoute";
 import MyTable from "./Table/MyTable";
@@ -21,15 +21,18 @@ import WindowCom from "./window/win_com";
 import WinDiv from "./window/win_div";
 import RelationsGraph from "./RelationsGraph";
 import Relation from "./customRelations/index";
+import Upload from './fileuploader';
+import AntdDesign from './antd';
 
 function App() {
     return (
-        <div style={{width: "100%", height: "100%"}}>
+        <div style={{ width: "100%", height: "100%" }}>
             {/*这里Switch 和 exact 用一个就够了*/}
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
-                    <Route path={"/customrelations"} render={() => <Relation height={800}/>} />
+                    <Route path={"/uploadfile"} render={() => <Upload />} />
+                    <Route path={"/customrelations"} render={() => <Relation height={800} />} />
                     <Route path={"/relationsgraph"} component={RelationsGraph} />
                     <Route path={"/windowdiv"} component={WinDiv} />
                     <Route path={"/windowcom"} component={WindowCom} />
@@ -49,6 +52,7 @@ function App() {
                     <Route path={"/reactfunc"} component={FuncComs} />
                     <Route path={"/gojs"} component={Gojs} />
                     <Route path={"/tinymain"} component={TinyMain} />
+                    <Route path={"/antd"} component={AntdDesign} />
                 </Switch>
             </BrowserRouter>
         </div>
@@ -56,7 +60,10 @@ function App() {
 }
 
 const Home = () => {
-    return <div style={{textAlign: "center", margin: "50px 0"}}>
+    return <div style={{ textAlign: "center", margin: "50px 0" }}>
+        <h2>上传文件</h2>
+        <Link to={"/uploadfile"}>Go</Link>
+        <Block />
         <h2>自定义图谱</h2>
         <Link to={"/customrelations"}>Go</Link>
         <Block />
@@ -113,9 +120,12 @@ const Home = () => {
         <Block />
         <h2>antd弹窗</h2>
         <Link to={"/modal"}>Go</Link>
+        <Block />
+        <h2>antd组件</h2>
+        <Link to={"/antd"}>Go</Link>
     </div>
 }
 
-const Block = () => <div style={{width: "100%", height: "50px"}}/>
+const Block = () => <div style={{ width: "100%", height: "50px" }} />
 
 export default withRouter(App);

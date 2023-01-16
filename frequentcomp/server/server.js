@@ -14,6 +14,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use("/antdform", require("./api/form"));
 app.use("/relationgraph", require("./api/form"));
+app.use("/file", require("./api/file"));
 
 app.listen(app.get('port'), () => {
     console.log(`start the server at: http://127.0.0.1:${app.get('port')}/`);
