@@ -1,6 +1,5 @@
 
 # dependencies
-/**/node_modules
 /.pnp
 .pnp.js
 
@@ -23,5 +22,5 @@ yarn-error.log*
 
 #本地的一些文件
 test.js
-.idea
-frequentcomp/.idea/
+**/.idea/
+**/node_modules/
