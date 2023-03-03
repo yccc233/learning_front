@@ -11,6 +11,7 @@ app.use("/static", express.static("./public"));
 
 
 app.use("/files", require("./api/updownload"));
+app.use("/transfer", require("./api/transfer"));
 app.use("/bin", require("./api/binary"));
 
 app.listen(app.get('port'), () => {

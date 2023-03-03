@@ -5,7 +5,7 @@ import { withRouter, Route, Switch, Link, Redirect, BrowserRouter } from "react-
 import MyRoute from "./Route/MyRoute";
 import MyTable from "./Table/MyTable";
 import MyForm from "./Form/MyForm";
-import MyDrag from "./Drag/MyDrag";
+import DragWin from "./Drag/dragwin";
 import Html2canvas from "./Html2canvas/Html2canvas";
 import ContextX from "./ContextMenu/Context";
 import MyModal from "./Modal/Modal";
@@ -40,7 +40,7 @@ function App() {
                     <Route path={"/route"}><MyRoute /></Route>
                     <Route path={"/table"} component={MyTable} />
                     <Route path={"/form"} component={MyForm} />
-                    <Route path={"/drag"} component={MyDrag} />
+                    <Route path={"/drag"} component={DragWin} />
                     <Route path={"/home"} component={Home} />
                     <Route path={"/html2canvas"} component={Html2canvas} />
                     <Route path={"/contextmenu"} component={ContextX} />
