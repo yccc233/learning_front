@@ -30,7 +30,7 @@ function Base64ToBlob(base64Str, fileType) {
         'jpeg': 'image/jpeg',
         'jpg': 'image/jpeg',
         'png': 'image/png',
-        'css': 'text/css',
+        'css': 'text/style',
         'html': 'text/html',
         'htm': 'text/html',
         'txt': 'text/plain',

@@ -1,32 +1,29 @@
-import React, { Component } from 'react';
-import $ from "jquery"
-class Text extends Component {
-    state = {
-        text: null
-    }
-    componentDidMount() {
-        if (this.hasrender) return;
-        this.hasrender = 1
-        // const file = document.getElementById('input_file2').files[0];
-        // let fileReader = new FileReader();
-        // const that = this;
-        // fileReader.onload = function (e) {
-        //   console.log("data", e.target.result);
-        //   that.setState({
-        //     text: e.target.result
-        //   });
-        // }
-        // fileReader.readAsArrayBuffer(file);
+import React, {Component} from 'react';
+import {transformStream} from "../../utils";
 
-        $.get("http://127.0.0.1:8080/bin/readStream").then(data => {
-            this.setState({ text: data })
-            console.log(data);
-        })
+class Text extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            stream: null,
+            texts: null,
+            decode: 'utf8'
+        };
+    }
+
+    componentDidMount() {
+        if (this.props.fileStream) {
+            this.setState({
+                stream: this.props.fileStream,
+                texts: transformStream(this.props.fileStream, 'utf8'),
+                decode: 'utf8'
+            });
+        }
     }
 
     render() {
         return <div>
-            {this.state.text}
+            {this.state.texts}
         </div>
     }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ExcelJS from "exceljs";
-import $ from "jquery";
 import Handsontable from 'handsontable';
 import { registerLanguageDictionary, zhCN } from "handsontable/i18n";
 import 'handsontable/dist/handsontable.full.min.css';

@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Drag/MyDrag.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drag/dragwin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Drag/myDrag.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +175,7 @@
       <workItem from="1676034392722" duration="485000" />
       <workItem from="1676040004113" duration="18000" />
       <workItem from="1676043365438" duration="665000" />
+      <workItem from="1678115397370" duration="1850000" />
     </task>
     <servers />
   </component>

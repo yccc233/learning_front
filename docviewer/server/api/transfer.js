@@ -10,15 +10,7 @@ function wordToPdf() {
         if (err) {
             console.log(err);
         } else {
-            toPdf(result).then(
-                (pdfBuffer) => {
-                    console.log(60, pdfBuffer)
-                    fs.writeFileSync("/www/test.pdf", pdfBuffer);
-                    console.log(成功生成PDF文件)
-                    // sendFile ToServer(* /pdf/test.pdf , '/sftp/pdf/test.pdf*) }, (err) => {
-                    console.log(66, err);
-                }
-            );
+
         }
     });
 }
@@ -39,6 +31,12 @@ router.post("/upload", function (req, res) {
         fileName = query.fileName[0]
         fileType = query.fileType[0]
         console.log(">>>>>>upload参数集>>>>>>", fileName, fileStream.length)
+        toPdf(result).then(pdfBuffer => {
+            console.log(60, pdfBuffer)
+            fs.writeFileSync("/www/test.pdf", pdfBuffer);
+            console.log("成功生成PDF文件");
+            console.log(66, err);
+        });
         res.end(JSON.stringify({ code: 0, msg: "成功" }));
     })
 })
