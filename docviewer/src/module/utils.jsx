@@ -28,7 +28,8 @@ const typeDic = {
     'dll': 'application/octet-stream',
     'pdf': 'application/pdf',
     'ai': 'application/postscript',
-    'xls': 'application/vnd.ms-excel',
+    // 'xls': 'application/vnd.ms-excel',
+    'xls': 'application/x-xls',
     'ppt': 'application/vnd.ms-powerpoint',
     'dir': 'application/x-director',
     'js': 'application/x-javascript',
@@ -69,4 +70,18 @@ export const base64toBlob = (str, type) => {
     const nBrr = new Uint8Array(n);
     while (n--) nBrr[n] = bst.charCodeAt(n);
     return new Blob([nBrr], {type: typeDic[type]});
+};
+export const base64toArrayBuffer = (str)=> {
+    let binary_string = window.atob(str);
+    let len = binary_string.length;
+    let bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+        bytes[i] = binary_string.charCodeAt(i);
+    }
+    return bytes.buffer;
+};
+
+// 首字母大写
+export const customCaptain = (str) => {
+    return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 };

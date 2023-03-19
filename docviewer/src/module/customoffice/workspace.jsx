@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Docx from './word/docx';
-import Doc from './word/doc';
 import Excel from './xlsx';
 import Text from './text';
 import ErrorHappened from "../errorboundary";
-import "../../style/customoffice.less";
 import Pdf from './pdf';
-import {Divider, Empty} from "antd";
+import Image from "./img";
+import { Divider, Empty, Result, Button } from "antd";
 
 class Workspace extends Component {
     constructor(props) {
@@ -15,16 +14,22 @@ class Workspace extends Component {
 
         const session = sessionStorage.getItem("fileInfo");
         if (session) {
-            const sessionFormat = JSON.parse(session);
+            let sessionFormat;
+            try {
+                sessionFormat = JSON.parse(session);
+            } catch (e) {
+                console.error(e);
+                sessionFormat = {};
+            }
             name = sessionFormat.fileName;
             type = sessionFormat.fileType;
             stream = sessionFormat.fileStream;
         }
 
         this.state = {
-            fileName: name,
-            fileType: type,
-            fileStream: stream
+            fileName: name || '',
+            fileType: type || '',
+            fileStream: stream || ''
         };
 
         this.analyse = this.analyse.bind(this);
@@ -44,7 +49,9 @@ class Workspace extends Component {
         fileReader.readAsDataURL(file);
         const that = this;
         fileReader.onload = function () {
-            const [name, type] = file.name.split(".");
+            const splits = file.name.split('.');
+            const name = splits.slice(0, splits.length - 1).join('.');
+            const type = splits[splits.length - 1];
             const result = this.result.slice(this.result.indexOf(',') + 1);
             that.setState({
                 fileName: name,
@@ -60,40 +67,53 @@ class Workspace extends Component {
     }
 
     render() {
-        const {fileType, fileStream} = this.state;
+        const { fileType, fileStream } = this.state;
         let docCom = null;
-        switch (fileType.toLowerCase()) {
-            case "docx":
-                docCom = <Docx fileStream={fileStream} type="docx"/>;
-                break;
+        const type = fileType.toLowerCase();
+        switch (type) {
             case "doc":
-                docCom = <Doc fileStream={fileStream} type="doc"/>;
+            case "docx":
+                docCom = <Docx fileStream={fileStream} type={type} />;
                 break;
             case "xlsx":
             case "xls":
-                docCom = <Excel fileStream={fileStream} type="xlsx"/>;
+            case "csv":
+                docCom = <Excel fileStream={fileStream} type={type} />;
                 break;
             case "txt":
-                docCom = <Text fileStream={fileStream} type="text"/>;
+                docCom = <Text fileStream={fileStream} type={type} />;
                 break;
             case "pdf":
-                docCom = <Pdf fileStream={fileStream} type="pdf"/>;
+                docCom = <Pdf fileStream={fileStream} type={type} />;
+                break;
+            case "png":
+            case "jpg":
+            case "jpeg":
+                docCom = <Image fileStream={fileStream} type={type} />;
                 break;
             default:
-                docCom = <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>;
+                docCom = <EmptyWay fileStream={fileStream} type={type} />;
         }
 
         return <ErrorHappened>
-            <div className='headline'>
-                <input id="input_file2" type="file" name="ycc"/>
+            <div style={{ height: 25 }}>
+                <input id="input_file2" type="file" name="ycc" />
                 <button onClick={this.analyse}>上传</button>
             </div>
-            <Divider style={{margin: 5}}/>
-            <div className='showfile'>
+            <Divider style={{ margin: 5 }} />
+            <div className='flex1'>
                 {docCom}
             </div>
         </ErrorHappened>;
     }
 }
 
+// 无预览方法的组件
+const EmptyWay = (props) => {
+    return <Result
+        className="custom-empty"
+        status="error"
+        title={props.fileStream ? `${props.type}文件无法在线预览` : "请上传文件"}
+    />;
+};
 export default (Workspace);

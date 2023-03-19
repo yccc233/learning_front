@@ -7,8 +7,8 @@ class ErrorBoundary extends React.Component {
 	}
 
 	componentDidCatch(error, info) {
-		// console.error("in errboundry", error, info);
 		this.setState({ hasError: true });
+		sessionStorage.removeItem("fileInfo");
 	}
 
 	render() {

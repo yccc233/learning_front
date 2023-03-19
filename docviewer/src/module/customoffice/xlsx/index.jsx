@@ -1,159 +1,167 @@
-import React, { Component } from 'react';
-import ExcelJS from "exceljs";
-import Handsontable from 'handsontable';
-import { registerLanguageDictionary, zhCN } from "handsontable/i18n";
-import 'handsontable/dist/handsontable.full.min.css';
+import * as XLSX from "xlsx";
+import React, {Component} from "react";
+import {base64toArrayBuffer, transformStream} from "../../utils";
+import Handsontable from "handsontable";
+import {getData, getColumns, getCells} from "./calculate";
+import 'handsontable/dist/handsontable.full.css';
 
-// 注册中文
+import {registerLanguageDictionary, zhCN} from "handsontable/i18n";
+import {registerAllModules} from "handsontable/registry";
 registerLanguageDictionary(zhCN);
+registerAllModules();
 
 
 class Excel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sheet: null,
-            sheetConfig: null
-        }
-        this.hasrender = 0;
+            workbook: null,
+            sheetNames: [],
+            sheetName: null,
 
+            height: null,
+            width: null
+        };
         this.hot = null;
-        this.workbook = null;
-        this.ws = null;
-
-        this.getData = this.getData.bind(this)
-        this.getCell = this.getCell.bind(this)
-        this.getMerge = this.getMerge.bind(this)
+        this.reRender = this.reRender.bind(this);
     }
 
-    fixMatrix(data, colLen) {
-        for (const row of data) {
-            for (let j = 0; j < colLen; j++) {
-                if (!row[j]) {
-                    row[j] = '';
-                }
+    componentDidMount() {
+        const that = this;
+        const dom = document.getElementsByClassName("excel-container")[0];
+        const width = dom.offsetWidth, height = dom.offsetHeight;
+
+        window.addEventListener("resize", () => {
+            const dom = document.getElementsByClassName("excel-container")[0];
+            that.setState({
+                width: dom.offsetWidth,
+                height: dom.offsetHeight
+            });
+        });
+
+        if (that.props.fileStream) {
+            that.registerRenderer();
+
+            if(that.props.type === 'csv'){
+                const csvd = transformStream(that.props.fileStream, 'utf8');
+                const workbook = XLSX.read(csvd, {type: 'binary'});
+                that.setState({
+                    workbook: workbook,
+                    sheetNames: workbook.SheetNames,
+                    sheetName: workbook.SheetNames[0],
+                    width: width,
+                    height: height
+                }, that.reRender);
+            }else {
+                //读取excel
+                const workbook = XLSX.read(that.props.fileStream, {type: 'base64'});
+                that.setState({
+                    workbook: workbook,
+                    sheetNames: workbook.SheetNames,
+                    sheetName: workbook.SheetNames[0],
+                    width: width,
+                    height: height
+                }, that.reRender);
             }
         }
-        return data;
     }
 
-    alignToClass({ horizontal, vertical }) {
-        return [horizontal, vertical]
-            .filter((i) => i)
-            .map((key) => `ht${key.charAt(0).toUpperCase()}${key.slice(1)}`)
-            .join(" ");
-    }
-
-    getData() {
-        return this.fixMatrix(this.ws.getRows(1, this.ws.actualRowCount).map((row) =>
-            row._cells.map((item) => {
-                const value = item.model.value;
-                if (value) {
-                    return value.richText ? value.richText.text : value;
-                }
-                return "";
-            })
-        ),
-            this.ws.columns.map((item) => item.letter).length
-        )
-    }
-
-    getCell() {
-        return this.ws.getRows(1, this.ws.actualRowCount).flatMap((row, ri) => {
-            return row._cells
-                .map((cell, ci) => {
-                    if (cell.style) {
-                        return {
-                            row: ri,
-                            col: ci,
-                            ...(cell.alignment
-                                ? { className: this.alignToClass(cell.alignment) }
-                                : {}),
-                            style: cell.style,
-                        };
-                    }
-                })
-                .filter((i) => i);
-        })
-    }
-
-
-    getMerge() {
-        return Object.values(this.ws._merges).map(({ left, top, right, bottom }) => {
-            // 构建区域
-            return {
-                row: top - 1,
-                col: left - 1,
-                rowspan: bottom - top + 1,
-                colspan: right - left + 1,
-            };
-        })
-    }
-    componentDidMount() {
-        if (this.hasrender) return;
-        this.hasrender = 1
-        const file = document.getElementById('input_file2').files[0];
-        let fileReader = new FileReader();
-        const that = this;
-        fileReader.onload = function (e) {
-            new ExcelJS.Workbook().xlsx.load(e.target.result).then(workbook => {
-                window.workbook = workbook;
-                that.workbook = workbook;
-
-                that.ws = workbook.getWorksheet(1);
-                
-                // 计算data
-                const data = that.getData();
-
-                // 计算cell
-                const cell = that.getCell();
-
-                // 计算merge
-                const merge = that.getMerge();
-
-                console.log("data", that.ws, data);
-                const container = document.getElementById('custom-excel');
-                that.hot = new Handsontable(container, {
-                    language: "zh-CN",
-                    readOnly: true,
-                    data: data,
-                    cell: cell,
-                    mergeCells: merge,
-                    colHeaders: true,
-                    rowHeaders: true,
-                    height: "calc(100vh - 107px)",
-                    // 关闭外部点击取消选中时间的行为
-                    outsideClickDeselects: false,
-                    licenseKey: "non-commercial-and-evaluation",
-                });
-                that.setState({
-                    sheetConfig: workbook._worksheets.filter(ws => ws)
-                });
-            }).catch(e => console.error(e))
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.width !== this.state.width || prevState.height !== this.state.height) {
+            this.hot?.updateSettings({
+                width: this.state.width,
+                height: this.state.height
+            });
         }
-        fileReader.readAsArrayBuffer(file);
+
+        if (prevState.sheetName!==this.state.sheetName){
+            this.reRender();
+        }
     }
 
-    changeSheet(id, name) {
-        console.log("change", this.hot);
-        this.ws = this.workbook.getWorksheet(id);
-        this.hot.updateSettings({
-            data: this.getData(),
-            cell: this.getCell(),
-            mergeCells: this.getMerge(),
+    componentWillUnmount() {
+        window.removeEventListener("resize", () => console.info("cancel resize in excel"));
+    }
+
+    getHotMergedCells(sheetName) {
+        if (this.state.workbook) {
+            var sheet = this.state.workbook.Sheets[sheetName];
+            var result = [];
+            var rawArr = sheet['!merges'];
+            for (var i in rawArr) {
+                var obj = rawArr[i];
+                var colspan = obj.e.c - obj.s.c + 1;
+                var rowspan = obj.e.r - obj.s.r + 1;
+                var handledObj = {
+                    row: obj.s.r,
+                    col: obj.s.c,
+                    rowspan: rowspan,
+                    colspan: colspan
+                }
+                result.push(handledObj);
+            }
+            return result;
+        }
+    }
+
+    reRender() {
+        const sheetArr = getData(this.state.workbook.Sheets[this.state.sheetName]);
+        const columns = getColumns(this.state.workbook, this.state.sheetName);
+        const options = {
+            language: "zh-CN",
+            data: sheetArr,
+            mergeCells: this.getHotMergedCells(this.state.sheetName),
+            columns: columns,
+            readOnly: true,
+            outsideClickDeselects: true,
+            rowHeaders: true,
+            colHeaders: true,
+            width: this.state.width,
+            height: this.state.height,
+            // filters: true,
+            dropdownMenu: true,
+            // contextMenu: true,
+            manualColumnMove: true,
+            manualRowMove: true,
+            // autoColumnSize: true,
+            manualColumnResize: true,
+            manualRowResize: true,
+            licenseKey: "non-commercial-and-evaluation",
+        };
+        if (this.hot) {
+            this.hot.updateSettings(options);
+        } else {
+            const container = document.getElementById('custom-excel');
+            this.hot = new Handsontable(container, options);
+        }
+    }
+
+    registerRenderer() {
+        // 注册自定义渲染
+        const _borders = ["left", "right", "top", "bottom"];
+        Handsontable.renderers.registerRenderer("styleRender", (hotInstance, TD, row, col, prop, value, cell) => {
+            Handsontable.renderers.getRenderer("text")(hotInstance, TD, row, col, prop, value, cell);
         });
     }
 
+
     render() {
-        const { sheetConfig } = this.state;
-        return <React.Fragment>
-            <div id="custom-excel"></div>
-            <div>
-                {sheetConfig && sheetConfig.map(sheet => (
-                    <button key={sheet.name + sheet.id} onClick={() => this.changeSheet(sheet.id, sheet.name)}>{sheet.name}</button>
-                ))}
+        const {sheetNames, sheetName} = this.state;
+        return (
+            <div className={"excel full"}>
+                <div className={"excel-container"}>
+                    <div id={"custom-excel"}/>
+                </div>
+                <div className="excel-sheets">
+                    {sheetNames.map((st, ind) => (
+                        <button key={st + ind} className={sheetName === st ? "checked" : null}
+                                onClick={() => this.setState({sheetName: st})}>
+                            {st}
+                        </button>
+                    ))}
+                </div>
             </div>
-        </React.Fragment>
+        );
     }
 }
 

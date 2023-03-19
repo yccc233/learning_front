@@ -95,14 +95,14 @@ class Pdf extends Component {
                             onClick={() => this.rerender(scale + 0.1, page)}/>
 				</span>
                 <div style={{flex: 1}}/>
-                <span>
+                <div className={"vhcenter"}>
 					<Popover
                         placement="bottom"
                         content={TipContent}
                     >
 						<QuestionCircleOutlined className="help"/>
 					</Popover>
-				</span>
+				</div>
                 <InputNumber
                     style={{width: 100}}
                     placeholder={"回车前往"}
