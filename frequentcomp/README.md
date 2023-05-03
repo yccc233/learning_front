@@ -12,12 +12,11 @@
 - react-json-view ——json可视化，[源码库](https://github.com/mac-s-g/react-json-view)
 
 
-
 > 在html2canvas中用antd的Image可以不用主动缩小图片尺寸
 
 ## 应用打包
 
--> webpack
+- webpack
 
 
 ## 具体描述
