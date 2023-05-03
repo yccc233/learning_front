@@ -8,7 +8,7 @@ class Workspace extends Component {
         super(props);
         let name = '', type = '', stream = '';
         const session = sessionStorage.getItem("fileInfo");
-        if ( session) {
+        if (session) {
             let sessionFormat;
             try {
                 sessionFormat = JSON.parse(session);
@@ -73,9 +73,9 @@ class Workspace extends Component {
         }
 
         return <ErrorHappened>
-            <div  style={{height:25}}>
-                <input id="input_file2" type="file" name="ycc"/>
-                <button onClick={this.analyse}>上传</button>
+            <div style={{height: 25}}>
+                <input id="input_file2" type="file" name="ycc" onChange={this.analyse}/>
+                <button onClick={this.analyse} style={{display: "none"}}>上传</button>
             </div>
             <Divider style={{margin: 5}}/>
             <div className='flex1'>

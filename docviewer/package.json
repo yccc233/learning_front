@@ -1,7 +1,7 @@
 {
   "name": "docviewer",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@babel/core": "^7.16.0",
@@ -17,7 +17,6 @@
     "babel-preset-react-app": "^10.0.1",
     "bfj": "^7.0.2",
     "blob": "^0.1.0",
-    "Blob": "^0.10.0",
     "browserslist": "^4.18.1",
     "buffer": "^6.0.3",
     "camelcase": "^6.2.1",
@@ -45,6 +44,7 @@
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
     "jquery": "^3.6.0",
+    "jschardet": "^3.0.0",
     "less-loader": "^11.1.0",
     "mini-css-extract-plugin": "^2.4.5",
     "moment": "^2.29.4",

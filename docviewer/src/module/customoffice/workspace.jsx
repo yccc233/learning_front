@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Docx from './word/docx';
 import Excel from './xlsx';
 import Text from './text';
 import ErrorHappened from "../errorboundary";
 import Pdf from './pdf';
 import Image from "./img";
-import { Divider, Empty, Result, Button } from "antd";
+import {Divider, Empty, Result, Button} from "antd";
 
 class Workspace extends Component {
     constructor(props) {
@@ -45,6 +45,7 @@ class Workspace extends Component {
 
     analyse() {
         const file = document.getElementById('input_file2').files[0];
+        if(!file) return;
         let fileReader = new FileReader();
         fileReader.readAsDataURL(file);
         const that = this;
@@ -67,40 +68,40 @@ class Workspace extends Component {
     }
 
     render() {
-        const { fileType, fileStream } = this.state;
+        const {fileType, fileStream} = this.state;
         let docCom = null;
         const type = fileType.toLowerCase();
         switch (type) {
             case "doc":
             case "docx":
-                docCom = <Docx fileStream={fileStream} type={type} />;
+                docCom = <Docx fileStream={fileStream} type={type}/>;
                 break;
             case "xlsx":
             case "xls":
             case "csv":
-                docCom = <Excel fileStream={fileStream} type={type} />;
+                docCom = <Excel fileStream={fileStream} type={type}/>;
                 break;
             case "txt":
-                docCom = <Text fileStream={fileStream} type={type} />;
+                docCom = <Text fileStream={fileStream} type={type}/>;
                 break;
             case "pdf":
-                docCom = <Pdf fileStream={fileStream} type={type} />;
+                docCom = <Pdf fileStream={fileStream} type={type}/>;
                 break;
             case "png":
             case "jpg":
             case "jpeg":
-                docCom = <Image fileStream={fileStream} type={type} />;
+                docCom = <Image fileStream={fileStream} type={type}/>;
                 break;
             default:
-                docCom = <EmptyWay fileStream={fileStream} type={type} />;
+                docCom = <EmptyWay fileStream={fileStream} type={type}/>;
         }
 
         return <ErrorHappened>
-            <div style={{ height: 25 }}>
-                <input id="input_file2" type="file" name="ycc" />
-                <button onClick={this.analyse}>上传</button>
+            <div style={{height: 25}}>
+                <input id="input_file2" type="file" name="ycc" onChange={this.analyse}/>
+                <button onClick={this.analyse} style={{display: "none"}}>上传</button>
             </div>
-            <Divider style={{ margin: 5 }} />
+            <Divider style={{margin: 5}}/>
             <div className='flex1'>
                 {docCom}
             </div>

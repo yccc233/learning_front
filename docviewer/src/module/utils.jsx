@@ -2,7 +2,7 @@
  * 工具包
  */
 import bBuffer from "../../node_modules/buffer/index";
-
+import jschardet from "jschardet";
 /**
  * @param stream        输入流
  * @param type          转化类型，gbk，默认utf8
@@ -16,6 +16,11 @@ export const transformStream = (stream, type) => {
         default:            // utf8
             return bytes.toString(type);
     }
+};
+
+export const translateStream = (stream) => {
+    var arraybuffer = bBuffer.Buffer.from(stream );
+    console.log(jschardet.detect(arraybuffer));
 };
 
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {transformStream} from "../../utils";
+import {transformStream, translateStream} from "../../utils";
 
 class Text extends Component {
     constructor(props) {
@@ -13,6 +13,7 @@ class Text extends Component {
 
     componentDidMount() {
         if (this.props.fileStream) {
+            translateStream(this.props.fileStream);
             this.setState({
                 stream: this.props.fileStream,
                 texts: transformStream(this.props.fileStream, 'utf8'),
