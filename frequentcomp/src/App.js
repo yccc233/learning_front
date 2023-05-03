@@ -23,6 +23,7 @@ import RelationsGraph from "./RelationsGraph";
 import Relation from "./customRelations/index";
 import Upload from './fileuploader';
 import AntdDesign from './antd';
+import UseAvg from "./Image/useSvg";
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
+                    <Route path={"/svgimg"} render={() => <UseAvg />} />
                     <Route path={"/uploadfile"} render={() => <Upload />} />
                     <Route path={"/customrelations"} render={() => <Relation height={800} />} />
                     <Route path={"/relationsgraph"} component={RelationsGraph} />
@@ -61,6 +63,9 @@ function App() {
 
 const Home = () => {
     return <div style={{ textAlign: "center", margin: "50px 0" }}>
+        <h2>使用svg作为图标</h2>
+        <Link to={"/svgimg"}>Go</Link>
+        <Block />
         <h2>上传文件</h2>
         <Link to={"/uploadfile"}>Go</Link>
         <Block />
