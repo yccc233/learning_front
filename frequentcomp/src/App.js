@@ -1,7 +1,7 @@
 import './App.css';
 
 import { withRouter, Route, Switch, Link, Redirect, BrowserRouter } from "react-router-dom";
-// import {IndexRoute} from "react-router";
+import Research from "./research";
 import MyRoute from "./Route/MyRoute";
 import MyTable from "./Table/MyTable";
 import MyForm from "./Form/MyForm";
@@ -32,8 +32,9 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"} />} />
-                    <Route path={"/svgimg"} render={() => <UseAvg />} />
-                    <Route path={"/uploadfile"} render={() => <Upload />} />
+                    <Route path={"/research"} render={Research} />
+                    <Route path={"/svgimg"} render={UseAvg} />
+                    <Route path={"/uploadfile"} render={Upload} />
                     <Route path={"/customrelations"} render={() => <Relation height={800} />} />
                     <Route path={"/relationsgraph"} component={RelationsGraph} />
                     <Route path={"/windowdiv"} component={WinDiv} />
@@ -63,6 +64,9 @@ function App() {
 
 const Home = () => {
     return <div style={{ textAlign: "center", margin: "50px 0" }}>
+        <h2>调研组件</h2>
+        <Link to={"/research"}>Go</Link>
+        <Block />
         <h2>使用svg作为图标</h2>
         <Link to={"/svgimg"}>Go</Link>
         <Block />
