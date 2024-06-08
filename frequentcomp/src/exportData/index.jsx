@@ -33,7 +33,6 @@ export default function ExportData() {
     };
 
     const exportExcel = async () => {
-        console.log("daochu")
         // 定义表头
         const columns = [
             {

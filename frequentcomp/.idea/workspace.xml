@@ -5,77 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../express-obj/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express-obj/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../express-obj/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../express-obj/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../express-obj/src/js/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../express-obj/src/js/login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/rg5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/rg5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/customRelations/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/customRelations/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileuploader/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileuploader/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/research/relations.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/research/relations.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/check-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/vue-loader.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/webpack.base.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/webpack.dev.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/webpack.prod.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/dev.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/test.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/e2e/custom-assertions/elementCount.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/e2e/nightwatch.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/e2e/runner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/jest.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/specs/HelloWorld.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/assets/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/assets/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/assets/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/TheWelcome.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/WelcomeItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconCommunity.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconDocumentation.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconEcosystem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconSupport.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconTooling.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/views/AboutView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/views/HomeView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exportData/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/exportData/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +212,7 @@
       <workItem from="1690809372355" duration="120000" />
       <workItem from="1691152747803" duration="9000" />
       <workItem from="1717775080387" duration="502000" />
-      <workItem from="1717837036859" duration="5391000" />
+      <workItem from="1717837036859" duration="5688000" />
     </task>
     <servers />
   </component>
