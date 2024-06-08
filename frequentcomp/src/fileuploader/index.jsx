@@ -25,7 +25,7 @@ export default function UploadFile() {
         <input ref={fileRef} type="file" hidden onChange={fileChange} />
         <button onClick={analyse}>分析</button>
         <a
-            href={"/static/新冠期间体温记录.xlsx"}
+            href={"/static/新冠期间体温记录.exportData"}
             download={"测试"}
         >下载</a>
     </>;

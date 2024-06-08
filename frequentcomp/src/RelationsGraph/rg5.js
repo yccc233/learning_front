@@ -53,24 +53,24 @@ const DemoRadialTreeGraph = () => {
             },
         },
     };
-    const toolbarCfg = {
-        show: true,
-        renderIcon: () => {
-            return <div style={{width: 100, height: 100}}>
-                wc
-            </div>
-        }
-    };
-    const tooltipCfg = {
-        show: true,
-        style:{background: "#aaa",position: "absolute", top: 10, left: 10},
-        customContent: (item) => {
-            console.log("customContent", item)
-            return <div style={{width: 100, height: 100, }}>
-                a?
-            </div>
-        }
-    };
+    // const toolbarCfg = {
+    //     show: true,
+    //     renderIcon: () => {
+    //         return <div style={{width: 100, height: 100}}>
+    //             wc
+    //         </div>
+    //     }
+    // };
+    // const tooltipCfg = {
+    //     show: true,
+    //     style:{background: "#aaa",position: "absolute", top: 10, left: 10},
+    //     customContent: (item) => {
+    //         console.log("customContent", item)
+    //         return <div style={{width: 100, height: 100, }}>
+    //             a?
+    //         </div>
+    //     }
+    // };
     const onReady = (graph) => {
         graph.on('node:contextmenu', (evt) => {
             // console.log("node:contextmenu", evt);

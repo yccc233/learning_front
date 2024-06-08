@@ -1,12 +1,12 @@
 import React, {Fragment, useEffect} from "react";
 import "./index.css";
 import "./common.css";
-import init from "./rg";
-import init1 from "./rg1";
-import init2 from "./rg2";
-import init3 from "./rg3";
-import init4 from "./rg4";
-import init5 from "./rg5";
+// import init from "./rg";
+// import init1 from "./rg1";
+// import init2 from "./rg2";
+// import init3 from "./rg3";
+// import init4 from "./rg4";
+// import init5 from "./rg5";
 import init6 from "./rg6";
 
 function RelationsGraph() {

@@ -5,8 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27787ed8-8c6b-45ac-917f-13302234f961" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../express-obj/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express-obj/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express-obj/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../express-obj/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express-obj/src/js/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../express-obj/src/js/login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RelationsGraph/rg5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationsGraph/rg5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customRelations/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/customRelations/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileuploader/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileuploader/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/research/relations.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/research/relations.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/config/test.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/e2e/custom-assertions/elementCount.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/e2e/nightwatch.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/e2e/runner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/jest.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/cli-movie/test/unit/specs/HelloWorld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/assets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/TheWelcome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/WelcomeItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/views/AboutView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue/v3-proj/vite.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +121,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="1zLB16c8ApOp0kAAC4TWnUjkENt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -65,14 +138,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/yudeng/apps/learn_front/frequentcomp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.app-server.executor": "Run",
+    "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,7 +168,17 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="app-server" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="app-server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -113,12 +199,24 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.app-server" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.start" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -178,7 +276,11 @@
       <workItem from="1676043365438" duration="665000" />
       <workItem from="1678115397370" duration="1850000" />
       <workItem from="1683126740785" duration="2960000" />
-      <workItem from="1690724638092" duration="1497000" />
+      <workItem from="1690724638092" duration="2515000" />
+      <workItem from="1690809372355" duration="120000" />
+      <workItem from="1691152747803" duration="9000" />
+      <workItem from="1717775080387" duration="502000" />
+      <workItem from="1717837036859" duration="5391000" />
     </task>
     <servers />
   </component>
