@@ -1,0 +1,26 @@
+
+.card {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s linear;
+
+    &:hover{
+        box-shadow: 0 0 6px 5px #eee;
+        transform: scale(110%);
+    }
+}
+
+.nameDom {
+    position: absolute;
+    height: 60px;
+    background: #66666699;
+    width: 100%;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+}

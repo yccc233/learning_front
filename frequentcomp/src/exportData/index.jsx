@@ -97,14 +97,14 @@ export default function ExportData() {
                 // 当前工作表（当前excel页）加入图片，图片放在 img 对应的单元格
                 workSheet.addImage(imageId, {
                     tl: {col: 0.2, row: ri + 1.2},  // 图片位置调整
-                    ext: {width: 50, height: 50}
+                    ext: {width: 200, height: 200}
                 });
 
                 // 清除单元格中的链接文本
                 workSheet.getCell(`A${ri + 2}`).value = '';
             }
             // 设置除了标题之外，内容的行高，避免图片太高，这里太小，导致显示很乱
-            workSheet.getRow(ri + 2).height = 50;
+            workSheet.getRow(ri + 2).height = 200;
         }
 
         // 设置info列文本自动换行
