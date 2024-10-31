@@ -25,6 +25,7 @@ import Upload from './fileuploader';
 import AntdDesign from './antd';
 import UseAvg from "./Image/useSvg";
 import ExportData from "./exportData";
+import Markdown from "./Markdown";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
             <BrowserRouter basename={"/"}>
                 <Switch>
                     <Route exact path={"/"} render={() => <Redirect to={"/home"}/>}/>
+                    <Route path={"/Markdown"} render={Markdown}/>
                     <Route path={"/exportdata"} render={ExportData}/>
                     <Route path={"/research"} render={Research}/>
                     <Route path={"/svgimg"} render={UseAvg}/>
@@ -66,6 +68,9 @@ function App() {
 
 const Home = () => {
     return <div style={{textAlign: "center", margin: "50px 0"}}>
+        <h2>markdown</h2>
+        <Link to={"/Markdown"}>Go</Link>
+        <Block/>
         <h2>导出数据</h2>
         <Link to={"/exportdata"}>Go</Link>
         <Block/>
