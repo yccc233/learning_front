@@ -1,10 +1,10 @@
 'use client'
-import {useEffect, useRef, useState} from 'react'
-import styles from '../styles/Home.module.css'
-import {Progress} from "antd";
-import Card from "@/src/card";
+import {useRef, useState} from 'react'
+import styles from '../../styles/Home.module.css'
+import {Button, Progress} from "antd";
+import Card from "@/src/vips1234/card";
 
-export default function Home() {
+export default function Index() {
 
     const containerWidth = 1050
 
@@ -30,11 +30,15 @@ export default function Home() {
     function parseValue(uint8Arr) {
         const decoder = new TextDecoder('utf-8');
         const str = decoder.decode(uint8Arr);
-        return str ? JSON.parse(str) : null
+        try {
+            return str ? JSON.parse(str) : null
+        } catch (e) {
+            console.error("parseValue", str, e)
+        }
     }
 
     async function fetchData() {
-        const response = await fetch('/api/getVipsGamesList')
+        const response = await fetch('/api/getSwitchGamesList')
         if (!response.ok) {
             console.error(response)
         } else {
@@ -74,13 +78,14 @@ export default function Home() {
     }
 
 
-    useEffect(() => {
-        fetchData()
-    }, []);
+    // useEffect(() => {
+    //     fetchData()
+    // }, []);
 
     return (
         <div className={styles.container}>
-            {/*<Button className={"absolute right-0 top-0"} onClick={async () => await fetchData()}>开始</Button>*/}
+            <Button style={{position: "absolute", right: 0, top: 60}}
+                    onClick={async () => await fetchData()}>开始</Button>
             <main className={styles.main} style={{width: containerWidth}}>
                 <div className={styles.process}>
                     <Progress

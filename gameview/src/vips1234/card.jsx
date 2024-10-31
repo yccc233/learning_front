@@ -1,4 +1,4 @@
-import styles from '../styles/Card.module.css';
+import styles from '../../styles/Card.module.css';
 import {Image} from "antd"
 
 export default function Card({info}) {
